@@ -1,48 +1,37 @@
 import { useState, useEffect, Profiler } from "react";
-import MainLayout from "./components/Layout/Layout"
-import Routing from "./components/Layout/Routing"
+import MainLayout from "./components/Layout/Layout";
+import Routing from "./components/Layout/Routing";
 import { BrowserRouter } from "react-router-dom";
 import LoginRouting from "./components/Layout/LoginRouting";
 import Loader from "./components/elements/Loader";
 import { Provider, connect } from "react-redux";
 import { getUserData } from "./redux/actions";
 
-
-
-
 function App(props) {
-  let { isLoading, isLoggedIn } = props
+  let { isLoading, isLoggedIn } = props;
   useEffect(() => {
-    getUserData()
+    getUserData();
   }, []);
 
   return (
     <div className="App">
-    
-       {isLoading ? <Loader/> : ''} 
-        <BrowserRouter>
-        {isLoggedIn ? 
+      {isLoading ? <Loader /> : ""}
+      <BrowserRouter>
+        {isLoggedIn ? (
           <MainLayout>
-          <Routing />
-          </MainLayout> : 
+            <Routing />
+          </MainLayout>
+        ) : (
           <LoginRouting isLoggedIn={isLoggedIn} />
-      }
-
-       
-
-     
-
-
+        )}
       </BrowserRouter>
     </div>
   );
 }
 
-
 const mapStateToProps = (state) => ({
   isLoading: state.isLoading,
-  isLoggedIn: state.user.isLoggedIn
-})
+  isLoggedIn: state.user.isLoggedIn,
+});
 
-
-export default connect(mapStateToProps  , { getUserData })(App)
+export default connect(mapStateToProps, { getUserData })(App);
