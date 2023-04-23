@@ -23,36 +23,36 @@ import client from "../../api/api"
 //   }
 // }
 
-export const getImages = () => async (dispatch) => {
-  await client.get("/slider")
-    .then(response => {
+// export const getImages = () => async (dispatch) => {
+//   await client.get("/slider")
+//     .then(response => {
     
-      dispatch({
-        type: Types.GET_IMAGE,
-        payload: { image: response.data },       
-      });
-    })
-    .catch((error)=>{
-            dispatch({
-                type: Types.ERROR_IMAGE,
-                  payload: {
-                     message:error.response.message
-                  }
-              })
-          })
-}; 
-export const addImage = (url) => async (dispatch) => {
-  await client.post('/slider' , url).then((response)=>{
-      NotificationSet('Successfully created' , 'success')
-      dispatch(getProduct())
-  }).catch((error)=>{
-      dispatch({
-          type: Types.ERROR_IMAGE,
-          payload: {
-             message:error.response.message
-          }
-      })
-  })}
+//       dispatch({
+//         type: Types.GET_IMAGE,
+//         payload: { image: response.data },       
+//       });
+//     })
+//     .catch((error)=>{
+//             dispatch({
+//                 type: Types.ERROR_IMAGE,
+//                   payload: {
+//                      message:error.response.message
+//                   }
+//               })
+//           })
+// }; 
+// export const addImage = (url) => async (dispatch) => {
+//   await client.post('/slider' , url).then((response)=>{
+//       NotificationSet('Successfully created' , 'success')
+//       dispatch(getProduct())
+//   }).catch((error)=>{
+//       dispatch({
+//           type: Types.ERROR_IMAGE,
+//           payload: {
+//              message:error.response.message
+//           }
+//       })
+//   })}
 
 
 export const getCategory = () => {

@@ -1,0 +1,19 @@
+{
+  "sliderimages": [
+    {
+      "id": 1,
+      "url": "https://example.com/image1.jpg"
+    },
+    {
+      "url": "https://images.pexels.com/photos/747784/pexels-photo-747784.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "id": 2
+    },
+    {
+      "url": {
+        "id": 714,
+        "imageUrl": "https://i.pinimg.com/564x/a1/c1/cf/a1c1cfbb2382c7a8cd5262120195a313.jpg"
+      },
+      "id": 3
+    }
+  ]
+}
