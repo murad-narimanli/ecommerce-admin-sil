@@ -10,7 +10,7 @@ const rootReducer = combineReducers({
   aboutusimage: AboutusimageReducer,
   isLoading: loaderReducer,
   user:userReducer,
-  images: imageReducer,
+  sliderimage: imageReducer,
 
 });
 
