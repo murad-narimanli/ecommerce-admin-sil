@@ -3,17 +3,30 @@
     {
       "id": 1,
       "url": "https://example.com/image1.jpg"
-    },
+    }
+  ],
+  "title": [
     {
-      "url": "https://images.pexels.com/photos/747784/pexels-photo-747784.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "id": 2
-    },
+      "title": "<h2>RİFAHINIZ</h2> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <h2>MƏQSƏDİMİZDİR</h2> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <h4>Hər Zaman Xidmətinizdəyik!</h4>",
+      "id": 1
+    }
+  ],
+  "vision": [
     {
-      "url": {
-        "id": 714,
-        "imageUrl": "https://i.pinimg.com/564x/a1/c1/cf/a1c1cfbb2382c7a8cd5262120195a313.jpg"
-      },
-      "id": 3
+      "vision": "<p>Şirkət olaraq viziyonumuz fəaliyyət göstərdiyimiz sahədə öz &nbsp;effektivliyilə seçilən və yüksək iqtisadi göstəricilərə malik olan lider şirkət olmaqdır.Oz əməkdaşlarının maddi , həmçinin iş şəraitinin yaxşılaşdırılması sahəsində əməli işlər görür</p>",
+      "id": 1
+    }
+  ],
+  "mission": [
+    {
+      "mission": "<p>Azərbaycan pərakəndə satış sektorunda daim gənc və inovativ şirkət olaraq müştərilərə yüksək keyfiyyətli qida və qeyri-qida məhsullarını sərfəli qiymətlə və peşəkar xidmətlə təqdim edərək onların həyat rifahını qaldırırıq.</p>",
+      "id": 1
+    }
+  ],
+  "aboutstore": [
+    {
+      "aboutstore": "<p>2009-cu ildə yaranan \"ANC GROUP\" MMC-nin tərkibində fəaliyyət göstərən \"Bravo\" supermarketlər şəbəkəsi və “Port Baku Bazar” market hər zaman müştəri məmnuniyyətinin artırılması və xidmət səviyyəsinin yaxşılaşdırılması üçün çalışır.</p>",
+      "id": 1
     }
   ]
 }

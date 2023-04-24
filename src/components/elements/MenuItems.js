@@ -71,16 +71,40 @@ const MenuItems = () =>{
                                 <span> Products </span>
                             </Link>
                         </Menu.Item>
-                        <Menu.Item key="22">
-                            <Link className='text-decoration-none' to={`/aboutusimage`}>
+                       
+                       </SubMenu>
+                    <SubMenu
+                        key="30"
+                        title={
+                            <span>
+                            <FundOutlined />
+                            <span>About</span>
+                            </span>
+                        }
+                    >
+                          <Menu.Item key="31">
+                            <Link className='text-decoration-none' to={`/title`}>
+                                <span> Başlıq </span>
+                            </Link>
+                        </Menu.Item>
+                        <Menu.Item key="32">
+                            <Link className='text-decoration-none' to={`/vision`}>
+                                <span> Viziyonumuz </span>
+                            </Link>
+                        </Menu.Item>
+                        <Menu.Item key="33">
+                            <Link className='text-decoration-none' to={`/mission`}>
+                                <span> Missiyamız </span>
+                            </Link>
+                        </Menu.Item>
+                        <Menu.Item key="34">
+                            <Link className='text-decoration-none' to={`/aboutstore`}>
                                 <span> Haqqımızda </span>
                             </Link>
                         </Menu.Item>
-                      
-                       
-                    </SubMenu>
+                        </SubMenu>
                     <SubMenu
-                        key="30"
+                        key="40"
                         title={
                             <span>
                             <FundOutlined />
@@ -88,29 +112,29 @@ const MenuItems = () =>{
                             </span>
                         }
                     >
-                          <Menu.Item key="31">
+                          <Menu.Item key="41">
                             <Link className='text-decoration-none' to={`/mainslider`}>
                                 <span> Əsas Slider </span>
                             </Link>
                         </Menu.Item>
-                        <Menu.Item key="32">
+                        <Menu.Item key="42">
                             <Link className='text-decoration-none' to={`/seasonaloffers`}>
                                 <span>  Sezon Təklifləri Slider </span>
                             </Link>
                         </Menu.Item>
-                        <Menu.Item key="33">
+                        <Menu.Item key="43">
                             <Link className='text-decoration-none' to={`/chooseyouslider`}>
                                 <span>  Sizin üçün seçdiklərimiz </span>
                             </Link>
                         </Menu.Item>
-                        <Menu.Item key="34">
+                        <Menu.Item key="44">
                             <Link className='text-decoration-none' to={`/weekoffers`}>
                                 <span>Həftənin Təklifləri Slider </span>
                             </Link>
                         </Menu.Item>
                         </SubMenu>
                         <SubMenu
-                        key="40"
+                        key="50"
                         title={
                             <span>
                             <FundOutlined />
@@ -118,12 +142,12 @@ const MenuItems = () =>{
                             </span>
                         }
                     >
-                        <Menu.Item key="41">
+                        <Menu.Item key="51">
                             <Link className='text-decoration-none' to={`/blog`}>
                                 <span>Blog </span>
                             </Link>
                         </Menu.Item>
-                        <Menu.Item key="42">
+                        <Menu.Item key="52">
                             <Link className='text-decoration-none' to={`/discountnews`}>
                                 <span>Endirim xeberleri </span>
                             </Link>
