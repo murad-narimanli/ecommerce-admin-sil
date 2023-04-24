@@ -1,25 +1,17 @@
 import Types from "../types";
 
-///
-import { ADD_IMAGE } from "../actions/index";
-
-const initialState = {
-  images: [],
-};
-
 export const imageReducer = (data = [] , action) =>{
   switch (action.type){
       case Types.GET_IMAGE :
-          return action.payload.images
-      case Types.SET_IMAGE :
-              localStorage.setItem('images' , JSON.stringify(action.payload.images))
-              return action.payload.images
+          return action.payload.sliderimages
+      case Types.SET_PRODUCT :
+              localStorage.setItem('sliderimages' , JSON.stringify(action.payload.sliderimages))
+              return action.payload.sliderimages
       case Types.ERROR_IMAGE :
           return action.payload.message
       default :
           return data;
   }}
-  
 
 
 
