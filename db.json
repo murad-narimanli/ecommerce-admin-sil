@@ -3,6 +3,18 @@
     {
       "id": 1,
       "url": "https://example.com/image1.jpg"
+    },
+    {
+      "url": "https://www.ers.ga.gov/sites/main/files/main-images/camera_lense_0.jpeg",
+      "id": 2
+    },
+    {
+      "url": "https://www.ers.ga.gov/sites/main/files/main-images/camera_lense_0.jpeg",
+      "id": 3
+    },
+    {
+      "url": "https://www.ers.ga.gov/sites/main/files/main-images/camera_lense_0.jpeg",
+      "id": 4
     }
   ],
   "title": [
@@ -13,7 +25,7 @@
   ],
   "vision": [
     {
-      "vision": "<p>Şirkət olaraq viziyonumuz fəaliyyət göstərdiyimiz sahədə öz &nbsp;effektivliyilə seçilən və yüksək iqtisadi göstəricilərə malik olan lider şirkət olmaqdır.Oz əməkdaşlarının maddi , həmçinin iş şəraitinin yaxşılaşdırılması sahəsində əməli işlər görür</p>",
+      "vision": "<p>Şirkət olaraq viziyonumuz fəaliyyət göstərdiyimiz sahədə öz &nbsp;effektivliyilə seçilən və yüksək iqtisadi göstəricilərə malik olan lider şirkət olmaqdır.Oz əməkdaşlarının maddi , həmçinin iş şəraitinin yaxşılaşdırılması sahəsində əməli işlər görür&nbsp;</p>",
       "id": 1
     }
   ],
@@ -26,6 +38,12 @@
   "aboutstore": [
     {
       "aboutstore": "<p>2009-cu ildə yaranan \"ANC GROUP\" MMC-nin tərkibində fəaliyyət göstərən \"Bravo\" supermarketlər şəbəkəsi və “Port Baku Bazar” market hər zaman müştəri məmnuniyyətinin artırılması və xidmət səviyyəsinin yaxşılaşdırılması üçün çalışır.</p>",
+      "id": 1
+    }
+  ],
+  "discountnews": [
+    {
+      "discountnews": "<p>Bravo bonus kartı əldə et cashback qazan.</p>",
       "id": 1
     }
   ]
