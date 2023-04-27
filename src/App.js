@@ -1,10 +1,10 @@
-import { useState, useEffect, Profiler } from "react";
+import { useState, useEffect } from "react";
 import MainLayout from "./components/Layout/Layout"
 import Routing from "./components/Layout/Routing"
 import { BrowserRouter } from "react-router-dom";
 import LoginRouting from "./components/Layout/LoginRouting";
 import Loader from "./components/elements/Loader";
-import { Provider, connect } from "react-redux";
+import {connect } from "react-redux";
 import { getUserData } from "./redux/actions";
 
 
