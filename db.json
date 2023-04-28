@@ -13,6 +13,15 @@
       "id": 3
     }
   ],
+  "blog": [
+    {
+      "id": 1,
+      "blog": "Üzünüzə qulluq edin",
+      "date": "01/01/2023",
+      "text": "Mövsüm fərqi olmadan özümüzə və üzümüzə qulluq etmək mütləqdir. Yayda günəş şüalarının faydaları olsa da, düzgün saatlarda günəşlənməsək zərərli tərəfləri ilə qarşılaşarıq....",
+      "image": "Blogimg0"
+    }
+  ],
   "title": [
     {
       "title": "<h2>RİFAHINIZ</h2> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <h2>MƏQSƏDİMİZDİR</h2> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <h4>Hər Zaman Xidmətinizdəyik!</h4>",
@@ -39,7 +48,7 @@
   ],
   "discountnews": [
     {
-      "discountnews": "<p>Bravo bonus kartı əldə et cashback qazan.</p>",
+      "discountnews": "<p>sddsd</p>",
       "id": 1
     }
   ]
