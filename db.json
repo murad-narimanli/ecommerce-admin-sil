@@ -1,8 +1,25 @@
 {
   "sliderimages": [
     {
+      "image": "https://images.pexels.com/photos/3985069/pexels-photo-3985069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "id": 1
+    },
+    {
+      "image": "https://images.pexels.com/photos/264636/pexels-photo-264636.jpeg",
+      "id": 2
+    },
+    {
+      "image": "https://images.pexels.com/photos/10574804/pexels-photo-10574804.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "id": 3
+    }
+  ],
+  "blog": [
+    {
       "id": 1,
-      "url": "https://example.com/image1.jpg"
+      "blog": "Üzünüzə qulluq edin",
+      "date": "01/01/2023",
+      "text": "Mövsüm fərqi olmadan özümüzə və üzümüzə qulluq etmək mütləqdir. Yayda günəş şüalarının faydaları olsa da, düzgün saatlarda günəşlənməsək zərərli tərəfləri ilə qarşılaşarıq....",
+      "image": "Blogimg0"
     }
   ],
   "title": [
@@ -13,7 +30,7 @@
   ],
   "vision": [
     {
-      "vision": "<p>Şirkət olaraq viziyonumuz fəaliyyət göstərdiyimiz sahədə öz &nbsp;effektivliyilə seçilən və yüksək iqtisadi göstəricilərə malik olan lider şirkət olmaqdır.Oz əməkdaşlarının maddi , həmçinin iş şəraitinin yaxşılaşdırılması sahəsində əməli işlər görür</p>",
+      "vision": "<p>Şirkət olaraq viziyonumuz fəaliyyət göstərdiyimiz sahədə öz &nbsp;effektivliyilə seçilən və yüksək iqtisadi göstəricilərə malik olan lider şirkət olmaqdır.Oz əməkdaşlarının maddi , həmçinin iş şəraitinin yaxşılaşdırılması sahəsində əməli işlər görür&nbsp;</p>",
       "id": 1
     }
   ],
@@ -26,6 +43,12 @@
   "aboutstore": [
     {
       "aboutstore": "<p>2009-cu ildə yaranan \"ANC GROUP\" MMC-nin tərkibində fəaliyyət göstərən \"Bravo\" supermarketlər şəbəkəsi və “Port Baku Bazar” market hər zaman müştəri məmnuniyyətinin artırılması və xidmət səviyyəsinin yaxşılaşdırılması üçün çalışır.</p>",
+      "id": 1
+    }
+  ],
+  "discountnews": [
+    {
+      "discountnews": "<p>sddsd</p>",
       "id": 1
     }
   ]

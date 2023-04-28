@@ -1,19 +1,14 @@
 import React, { useRef, useEffect, useState } from "react";
 import {
   Button,
-  Select,
   Form,
-  Input,
   Card,
   Row,
   Col,
-  Popconfirm,
-  message,
 } from "antd";
 import JoditEditor from "jodit-react";
 import {
   UnorderedListOutlined,
-  DeleteOutlined,
   EditOutlined,
 } from "@ant-design/icons";
 import client from "../../../../api/api";

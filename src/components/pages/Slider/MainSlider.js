@@ -1,107 +1,203 @@
-// import React, { useState } from "react";
-// import { useDispatch } from "react-redux";
-// import {Row , Col } from 'antd';
-// import { addImage } from"../../../redux/actions/index";
-//   import { Images } from "../../../const/data";
-// import { connect } from "react-redux";
-// import {
-//   UnorderedListOutlined,
-// } from '@ant-design/icons';
+import React, { useRef, useEffect, useState } from "react";
+import { Button, Modal, Form, Input, Card, Row, Col } from "antd";
+import { UnorderedListOutlined, DeleteOutlined } from "@ant-design/icons";
+import client from "../../../api/api";
+import axios from "axios";
+import "../../../assets/css/main.scss";
 
+const MainSlider = () => {
+  const [data, setData] = useState([]);
+  const [file, setFile] = useState({});
+  const [fileList, setFileList] = useState([]);
+  const [previewVisible, setPreviewVisible] = useState(false);
+  const [previewImage, setPreviewImage] = useState([]);
 
-// function MainSlider() {
-//   const [imageUrl, setImageUrl] = useState("");
-//   const dispatch = useDispatch();
+  const getBase64 = (file) => {
+    console.log(file, "base64");
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result);
+      console.log(reader.result);
+      reader.onerror = (error) => reject(error);
+    });
+  };
 
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     dispatch(addImage(imageUrl));
-//     setImageUrl("");
-//   };
+  const handlePreview = async (file) => {
+    console.log(file);
+    if (!file.url && !file.preview) {
+      file.preview = await getBase64(file.originFileObj);
+    }
+    setPreviewImage(file.url || file.preview);
+    setPreviewVisible(true);
+  };
 
-//   return (
-//     <div>
-//        <Row gutter={[16,16]}>
-//                 <Col xs={24}>
-//                     <div className="border p-3 mt-0 bg-white">
-//                         <div className=" d-flex align-items-center page-name">
-//                             <UnorderedListOutlined className="me-2" />
-//                             <span className="font-weight-bold">Əsas Slider</span>
-//                         </div>
-//                     </div>
-//                 </Col>
-//                 <Col md ={12}>
-//                 <form onSubmit={handleSubmit}>
-//         <input
-//           type="text"
-//           value={imageUrl}
-//           onChange={(e) => setImageUrl(e.target.value)}
-//         />
-//         <button type="submit">Add Image</button>
-//       </form>
-//                 </Col>
-//                 </Row>
-     
-//     </div>
-//   );
-// }
+  const onChange = ({ fileList: newFileList }) => {
+    console.log(newFileList);
+    setFileList(newFileList);
+    if (newFileList.length <= 0) {
+      setFile(null);
+    }
+  };
 
-// const mapStateToProps = (state) => ({
-//   Image: state.Image
-// })
+  useEffect(() => {
+    getData();
+  }, []);
 
+  const getData = async () => {
+    await client.get("sliderimages").then((res) => {
+      if (res.data.length) {
+        setData(res.data);
+      }
+    });
+  };
 
-// export default connect(mapStateToProps  , { addImage})(MainSlider)
+  const formRef = useRef(null);
 
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { Row, Col } from "antd";
-import { getImage, addImage } from "../../../redux/actions/mainactionslider";
-import { connect } from "react-redux";
-import { UnorderedListOutlined } from "@ant-design/icons";
+  const [id, setId] = useState(null);
 
-function MainSlider() {
-  const [imageUrl, setImageUrl] = useState("");
-  const dispatch = useDispatch();
+  const onFinish = (values) => {
+    client
+      .post(`sliderimages`, {
+        ...values,
+      })
+      .then((res) => {
+        console.log("OK");
+        getData();
+      });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    dispatch(addImage(imageUrl));
-    setImageUrl("");
+    setFile({});
+    setFileList([]);
+    formRef.current.resetFields();
+  };
+
+  const onFinishFailed = (errorInfo) => {
+    console.log("Failed:", errorInfo);
+  };
+
+  const deleteData = (data) => {
+    client
+      .delete(`sliderimages/${data.id}`)
+      .then((res) => {
+        console.log("Data deleted successfully");
+        getData();
+      })
+      .catch((error) => {
+        console.log("Error:", error);
+      });
+  };
+
+  const setUploadFile = ({ onSuccess, onError, file }) => {
+    console.log(file);
+    let form_data = new FormData();
+    const filename = Math.random(1, 999999) + Date.now() + file.name;
+    form_data.append("image", file, filename);
+    axios
+      .post("https://dev-layf.vac.az/api/Upload/Image", form_data, {
+        headers: {
+          "Content-type": "multipart/form-data",
+        },
+      })
+      .then((res) => {
+        console.log(res);
+        setFile(res.data);
+        onSuccess(null, file);
+      })
+      .catch((err) => onError());
   };
 
   return (
     <div>
+      <Modal
+        title="Image"
+        open={previewVisible}
+        onCancel={() => {
+          setPreviewVisible(false);
+        }}
+      >
+        <img className="w-100" src={previewImage} alt="" />
+      </Modal>
+
       <Row gutter={[16, 16]}>
         <Col xs={24}>
           <div className="border p-3 mt-0 bg-white">
             <div className=" d-flex align-items-center page-name">
               <UnorderedListOutlined className="me-2" />
-              <span className="font-weight-bold">Əsas Slider</span>
+              <span className="font-weight-bold"></span>
             </div>
           </div>
         </Col>
-        <Col md={12}>
-          <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              value={imageUrl}
-              onChange={(e) => setImageUrl(e.target.value) }/>
-            <button type="submit">Add Image</button>
-          </form>
+        <Col md={24}>
+          <div style={{ display: "flex", flexWrap: "wrap" }}>
+            {data.map((d) => (
+              <Card
+                key={d.id}
+                cover={
+                  <img className="border w-100" alt="example" src={d.image} />
+                }
+                style={{ width: "calc(33.33% - 10px)", margin: "0 3px" }}
+                actions={[
+                  <DeleteOutlined
+                    onClick={() => {
+                      deleteData(d);
+                    }}
+                    key="delete"
+                  />,
+                  
+                ]}
+              />
+            ))}
+          </div>
+        </Col>
+        <Col md={24}>
+          <div className="border py-5 mb-5 p-3">
+            <Form
+              ref={formRef}
+              name="basic"
+              onFinish={onFinish}
+              onFinishFailed={onFinishFailed}
+              autoComplete="off"
+            >
+              <Form.Item
+                label={"PhotoUrl"}
+                name="image"
+                rules={[
+                  {
+                    required: true,
+                    message: "Please input url!",
+                  },
+                ]}
+              >
+                <Input placeholder="url" />
+              </Form.Item>
+
+              <div className="d-flex">
+                <Form.Item>
+                  <Button
+                    className="btn btn-success"
+                    type="primary"
+                    htmlType="submit"
+                  >
+                    {id ? "Edit" : "Add"}
+                  </Button>
+                </Form.Item>
+
+                <Button
+                  onClick={() => {
+                    setId(null);
+                    formRef.current.resetFields();
+                  }}
+                  className="ms-3"
+                >
+                  Cancel
+                </Button>
+              </div>
+            </Form>
+          </div>
         </Col>
       </Row>
     </div>
   );
-}
+};
 
-const mapStateToProps = (state) => ({
-  sliderimages: state.sliderimages,
-  });
-  
-  export default connect(mapStateToProps, { getImage,addImage })(MainSlider);
-
-
-
-
-
+export default MainSlider;
