@@ -51,5 +51,42 @@
       "discountnews": "<p>sddsd</p>",
       "id": 1
     }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "Zumrud",
+      "email": "zumrudbaxshaliyeva@gmail.com",
+      "password": "zumrud123456",
+      "isAdmin": true
+    },
+    {
+      "id": 2,
+      "username": "Elyana",
+      "email": "elyana@gmail.com",
+      "password": "elyana123456",
+      "isAdmin": false
+    },
+    {
+      "id": 3,
+      "username": "Xaliqe",
+      "email": "xaliqe@gmail.com",
+      "password": "xaliqe123456",
+      "isAdmin": false
+    }
+  ],
+  "products": [
+    {
+      "id": 17,
+      "img": "C:\\fakepath\\1548529521_profil-ucun-sekil-yukle-derin-duygular-7.jpg",
+      "name": "sekil",
+      "price": "69"
+    },
+    {
+      "name": "sokolad",
+      "price": "3",
+      "img": "https://www.adobe.com/express/feature/image/media_16ad2258cac6171d66942b13b8cd4839f0b6be6f3.png?width=2000&format=webply&optimize=medium",
+      "id": 18
+    }
   ]
 }

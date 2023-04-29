@@ -2,7 +2,6 @@ import {Routes, Route} from "react-router-dom";
 import Home from "../pages/Home";
 import NoPage from "../elements/NoPage";
 import Categories from "../pages/Admin/Categories/Categories";
-import Products from "../pages/Content/Products/Products";
 import MainSlider from "../pages/Slider/MainSlider";
 import About from "../pages/Content/About/Aboutstore";
 import Seasonaloffers from "../pages/Slider/Seasonaloffers"
@@ -14,12 +13,15 @@ import Title from "../pages/Content/About/Title";
 import Vision from "../pages/Content/About/Vision"
 import Mission from "../pages/Content/About/Mission";
 import Aboutstore from "../pages/Content/About/Aboutstore";
+import ProductView from "../pages/Content/Products/ProductView";
+import ProductCreate from "../pages/Content/Products/ProductCreate";
+import ProductEdit from "../pages/Content/Products/ProductEdit";
 const Routing = () => {
     return (
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/categories" element={<Categories />} />
-            <Route path="/products" element={<Products />} />
+            <Route path="/productview" element={<ProductView />} />
             <Route path="/mainslider" element={<MainSlider />} />
             <Route path="/title" element={<Title />} />
             <Route path="/vision" element={<Vision />} />
@@ -33,6 +35,9 @@ const Routing = () => {
             <Route path="/weekoffers" element={<Weekoffers />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/discountnews" element={<Discountnews />} />
+
+            <Route path="productcreate" element={<ProductCreate/>}/>
+            <Route path="productupdate/:id" element={<ProductEdit/>}/>
 
 
 
