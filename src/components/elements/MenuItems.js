@@ -67,7 +67,7 @@ const MenuItems = () =>{
                         }
                     >
                         <Menu.Item key="21">
-                            <Link className='text-decoration-none' to={`/products`}>
+                            <Link className='text-decoration-none' to={`/productview`}>
                                 <span> Products </span>
                             </Link>
                         </Menu.Item>
