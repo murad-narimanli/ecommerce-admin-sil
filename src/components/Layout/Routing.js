@@ -4,7 +4,6 @@ import NoPage from "../elements/NoPage";
 import Categories from "../pages/Admin/Categories/Categories";
 import Products from "../pages/Content/Products/Products";
 import MainSlider from "../pages/Slider/MainSlider";
-import About from "../pages/Content/About/Aboutstore";
 import Seasonaloffers from "../pages/Slider/Seasonaloffers"
 import Chooseyouslider from "../pages/Slider/Chooseyouslider";
 import Weekoffers from "../pages/Slider/Weekoffers";
@@ -14,6 +13,7 @@ import Title from "../pages/Content/About/Title";
 import Vision from "../pages/Content/About/Vision"
 import Mission from "../pages/Content/About/Mission";
 import Aboutstore from "../pages/Content/About/Aboutstore";
+import BlogDetail from "../pages/Blog/BlogDetails"
 const Routing = () => {
     return (
         <Routes>
@@ -25,9 +25,7 @@ const Routing = () => {
             <Route path="/vision" element={<Vision />} />
             <Route path="/mission" element={<Mission />} />
             <Route path="/aboutstore" element={<Aboutstore />} />
-
-
-
+            <Route path="/blogdetail/:id" element={<BlogDetail />} />
             <Route path="/seasonaloffers" element={<Seasonaloffers />} />
             <Route path="/chooseyouslider" element={<Chooseyouslider />} />
             <Route path="/weekoffers" element={<Weekoffers />} />

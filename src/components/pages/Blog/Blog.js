@@ -1,3 +1,151 @@
+// import React, { useRef, useEffect, useState } from "react";
+// import {
+//   Button,
+//   Form,
+//   Card,
+//   Row,
+//   Col,
+//   Input
+// } from "antd";
+// import {
+//   UnorderedListOutlined,
+//   EditOutlined,
+//  } from "@ant-design/icons";
+// import client from "../../../api/api";
+// const {TextArea } = Input
+
+
+// const Blog = () => {
+//   const [data, setData] = useState([]);
+
+//   useEffect(() => {
+//     getData();
+//   }, []);
+
+//   const getData = async () => {
+//     await client.get("blog").then((res) => {
+//       if (res.data.length) {
+//         setData(res.data);
+//       }
+//     });
+//   };
+
+//   const formRef = useRef(null);
+
+//   const [id, setId] = useState(null);
+
+//   const onFinish = (values) => {
+//     client.put(`blog/1`, values).then((res) => {
+//       console.log("OK");
+//       getData();
+//     });
+//     formRef.current.resetFields();
+//   };
+
+//   const editData = (data) => {
+//     setId(data.id);
+//     const obj = {
+//       blog: data.blog,
+//     };
+//     formRef.current.setFieldsValue(obj);
+//   };
+
+//   const onFinishFailed = (errorInfo) => {
+//     console.log("Failed:", errorInfo);
+//   };
+
+//   return (
+//     <div>
+//       <Row gutter={[16, 16]}>
+//         <Col xs={24}>
+//           <div className="border p-3 mt-0 bg-white">
+//             <div className=" d-flex align-items-center page-name">
+//               <UnorderedListOutlined className="me-2" />
+//               <span className="font-weight-bold">Haqqımızda</span>
+//             </div>
+//           </div>
+//         </Col>
+//         <Col md={12}>
+//           {data.map((d) => {
+//             return (
+//               <Card
+//                 style={{ width: "100%" }}
+//                 actions={[
+//                   <EditOutlined
+//                     onClick={() => {
+//                       editData(d);
+//                     }}
+//                     key="edit"
+//                   />,
+//                 ]}
+//               >
+                
+    
+//                  {data.map((d) => (
+//                   <div>
+//                     <h6>Haqqımızda</h6>
+//                     <p> {d[`blog`]} </p>    
+//                   </div>
+//                 ))}
+          
+//               </Card>
+             
+//             );
+           
+//           })}
+                 
+//         </Col>
+//         <Col md={12}>
+//           <div className="border pt-5 p-3">
+//             <Form
+//               ref={formRef}
+//               name="basic"
+//               onFinish={onFinish}
+//               onFinishFailed={onFinishFailed}
+//               autoComplete="off"
+//             >
+//               <Form.Item
+//                 label={"Mətn"}
+//                 name="blog"
+//                 rules={[
+//                   {
+//                     required: true,
+//                     message: "Please input content!",
+//                   },
+//                 ]}
+//               >
+//             <TextArea placeholder='Title' />
+
+//               </Form.Item>
+
+//               <div className="d-flex">
+//                 <Form.Item>
+//                   <Button type="primary" htmlType="submit">
+//                     {id ? "Edit" : "Add"}
+//                   </Button>
+//                 </Form.Item>
+
+//                 <Button
+//                   onClick={() => {
+//                     setId(null);
+//                     formRef.current.resetFields();
+//                   }}
+//                   className="ms-3"
+//                 >
+//                   Cancel
+//                 </Button>
+//               </div>
+//             </Form>
+//           </div>
+//         </Col>
+      
+//       </Row>
+//     </div>
+//   );
+// };
+
+// export default Blog;
+
 import React, { useRef, useEffect, useState } from "react";
 import {
   Button,
@@ -5,48 +153,22 @@ import {
   Card,
   Row,
   Col,
+  Input,
 } from "antd";
-import JoditEditor from "jodit-react";
 import {
   UnorderedListOutlined,
-  EditOutlined,DeleteOutlined
+  EditOutlined,
 } from "@ant-design/icons";
-import client from '../../../api/api'
-import axios from "axios";
-
+import client from "../../../api/api";
+const { TextArea } = Input;
 
 const Blog = () => {
   const [data, setData] = useState([]);
-  const [file, setFile] = useState({});
-  const [fileList, setFileList] = useState([]);
-  const [previewVisible, setPreviewVisible] = useState(false);
+  const formRef = useRef(null);
+  const [id, setId] = useState(null);
+  const [date, setDate] = useState(null);
 
-  const [previewImage, setPreviewImage] = useState([]);
- const getBase64 = (file) => {
-    console.log(file, "base64");
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.readAsDataURL(file);
-      reader.onload = () => resolve(reader.result);
-      console.log(reader.result);
-      reader.onerror = (error) => reject(error);
-    });
-  };
-    const handlePreview = async (file) => {
-    console.log(file);
-    if (!file.url && !file.preview) {
-      file.preview = await getBase64(file.originFileObj);
-    }
-    setPreviewImage(file.url || file.preview);
-    setPreviewVisible(true);
-  };
-  const onChange = ({ fileList: newFileList }) => {
-    console.log(newFileList);
-    setFileList(newFileList);
-    if (newFileList.length <= 0) {
-      setFile(null);
-    }
-  };
+
   useEffect(() => {
     getData();
   }, []);
@@ -59,64 +181,54 @@ const Blog = () => {
     });
   };
 
- 
-
-
-
-  const deleteData = (data) => {
-    client
-      .delete(`blog/${data.id}`)
-      .then((res) => {
-        console.log("Data deleted successfully");
-        getData();
-      })
-      .catch((error) => {
-        console.log("Error:", error);
-      });
-  };
-  const formRef = useRef(null);
-
-  const [id, setId] = useState(null);
-
   const onFinish = (values) => {
-    client.put(`blog/1`, values).then((res) => {
-      console.log("OK");
-      getData();
-    });
+    if (id) {
+      client.put(`blog/${id}`, values).then(() => {
+        console.log("Data updated successfully");
+        getData();
+      });
+    } else {
+      const newData = [
+        ...data,
+        {
+          id: data.length + 1,
+          date: date,
+          ...values,
+        },
+      ];
+      client.post("blog", values).then(() => {
+        console.log("Data added successfully");
+        getData();
+      });
+      setData(newData);
+    }
+    setId(null);
+    setDate(null);
+
     formRef.current.resetFields();
   };
 
   const editData = (data) => {
     setId(data.id);
+    setDate(data.date);
     const obj = {
-      blog: data.blog,
+      title: data.title,
+      image: data.image,
+      text: data.text,
     };
     formRef.current.setFieldsValue(obj);
+  };
+
+  const deleteData = (id) => {
+    client.delete(`blog/${id}`).then(() => {
+      console.log("Data deleted successfully");
+      getData();
+    });
   };
 
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
-   const setUploadFile = ({ onSuccess, onError, file }) => {
-    console.log(file);
-    let form_data = new FormData();
-    const filename = Math.random(1, 999999) + Date.now() + file.name;
-    form_data.append("image", file, filename);
-    axios
-      .post("https://dev-layf.vac.az/api/Upload/Image", form_data, {
-        headers: {
-          "Content-type": "multipart/form-data",
-        },
-      })
-      .then((res) => {
-        console.log(res);
-        setFile(res.data);
-        onSuccess(null, file);
-      })
-      .catch((err) => onError());
-  };
-
-  
 
   return (
     <div>
@@ -125,17 +237,15 @@ const Blog = () => {
           <div className="border p-3 mt-0 bg-white">
             <div className=" d-flex align-items-center page-name">
               <UnorderedListOutlined className="me-2" />
-              <span className="font-weight-bold"></span>
+              <span className="font-weight-bold">Data</span>
             </div>
           </div>
         </Col>
-        <Col md={24}>
+        <Col md={12}>
           {data.map((d) => {
             return (
               <Card
-              cover={
-                <img className="border w-100" alt="example" src={d.blogimage} />
-              }
+                key={d.id}
                 style={{ width: "100%" }}
                 actions={[
                   <EditOutlined
@@ -144,76 +254,79 @@ const Blog = () => {
                     }}
                     key="edit"
                   />,
-                  <DeleteOutlined
+                  <Button
                     onClick={() => {
-                      deleteData(d);
+                      deleteData(d.id);
                     }}
                     key="delete"
-                  />
+                  >
+                    Delete
+                  </Button>,
                 ]}
               >
-                
-    
-                 {data.map((d) => (
-                  <div>
-                    
-                    <div dangerouslySetInnerHTML={{ __html:  d[`blog`] }} />
-                  </div>
-                ))}
-          
-              </Card>
-             
-            );
-           
-          })}
-                 
-        </Col>
-        <Col md={24}>
-          <div className="border pt-5 p-3">
-            <Form
-              ref={formRef}
-              name="basic"
-              onFinish={onFinish}
-              onFinishFailed={onFinishFailed}
-              autoComplete="off"
-            >
-              <Form.Item
-                label={"Mətn"}
-                name="blog"
-                rules={[
-                  {
-                    required: true,
-                    message: "Please input content!",
-                  },
-                ]}
-              >
-                <JoditEditor />
-              </Form.Item>
-
-              <div className="d-flex">
-                <Form.Item>
-                  <Button type="primary" htmlType="submit">
-                    {id ? "Edit" : "Add"}
-                  </Button>
-                </Form.Item>
-
-                <Button
-                  onClick={() => {
-                    setId(null);
-                    formRef.current.resetFields();
-                  }}
-                  className="ms-3"
-                >
-                  Cancel
-                </Button>
-              </div>
-            </Form>
+                          <div className="mb-2">
+              <img src={d.image} alt={d.title} style={{ maxWidth: "100%" }} />
           </div>
-        </Col>
-      
-      </Row>
-    </div>
-  );
+          <h2>{d.title}</h2>
+          <p>{d.text}</p>
+          <p>{d.date}</p>
+
+          </Card>
+        );
+      })}
+ 
+
+    </Col>
+    <Col md={12}>
+      <Form
+        name="basic"
+        onFinish={onFinish}
+        onFinishFailed={onFinishFailed}
+        ref={formRef}
+      >
+        <Form.Item
+          label="Title"
+          name="title"
+          rules={[{ required: true, message: "Please input title!" }]}
+        >
+          <Input />
+        </Form.Item>
+
+        <Form.Item
+          label="Image URL"
+          name="image"
+          rules={[
+            { required: true, message: "Please input image URL!" },
+          ]}
+        >
+          <Input />
+        </Form.Item>
+
+        <Form.Item
+          label="Text"
+          name="text"
+          rules={[{ required: true, message: "Please input text!" }]}
+        >
+          <TextArea />
+        </Form.Item>
+        <Form.Item
+          label="Date"
+          name="date"
+          rules={[{ required: true, message: "Please input title!" }]}
+        >
+          <Input />
+        </Form.Item>
+
+        <Form.Item>
+          <Button type="primary" htmlType="submit">
+            {id ? "Update" : "Submit"}
+          </Button>
+        </Form.Item>
+      </Form>
+    </Col>
+  </Row>
+</div>
+);
 };
 
 export default Blog;

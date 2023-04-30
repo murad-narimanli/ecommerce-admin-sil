@@ -148,6 +148,11 @@ const MenuItems = () =>{
                             </Link>
                         </Menu.Item>
                         <Menu.Item key="52">
+                            <Link className='text-decoration-none' to={`/blogdetail/id`}>
+                                <span>BlogDetail </span>
+                            </Link>
+                        </Menu.Item>
+                        <Menu.Item key="53">
                             <Link className='text-decoration-none' to={`/discountnews`}>
                                 <span>Endirim xeberleri </span>
                             </Link>

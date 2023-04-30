@@ -15,13 +15,23 @@
   ],
   "blog": [
     {
-      "id": 1,
-      "blog": "Üzünüzə qulluq edin",
-      "date": "01/01/2023",
-      "text": "Mövsüm fərqi olmadan özümüzə və üzümüzə qulluq etmək mütləqdir. Yayda günəş şüalarının faydaları olsa da, düzgün saatlarda günəşlənməsək zərərli tərəfləri ilə qarşılaşarıq....",
-      "image": "Blogimg0"
+      "title": "Üzünüzə qulluq edin",
+      "image": "http://localhost:3002/static/media/blogimg0.8840dec6ef5110de291a.png",
+      "text": "1112222",
+      "date": "30/04/23",
+      "id": 1
     }
   ],
+  "blogdetail": [
+    {
+      "title": "Üzünüzə qulluq edin",
+      "image": "http://localhost:3002/static/media/blogimg0.8840dec6ef5110de291a.png",
+      "text": "1112222",
+      "date": "30/04/23",
+      "id": 1
+    }
+  ],
+  
   "title": [
     {
       "title": "<h2>RİFAHINIZ</h2> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <h2>MƏQSƏDİMİZDİR</h2> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <h4>Hər Zaman Xidmətinizdəyik!</h4>",
@@ -48,7 +58,7 @@
   ],
   "discountnews": [
     {
-      "discountnews": "<p>sddsd</p>",
+      "discountnews": "<p>Bravo bonus kartla endirim əldə edin.</p>",
       "id": 1
     }
   ]
