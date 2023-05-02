@@ -10,7 +10,7 @@ function ProductCreate() {
         axios.post('http://localhost:3030/products',inputData)
         .then(res=>{
             alert("Data Added Successfully!")
-            navigate('/')
+            navigate('/productview')
             .catch(err=>console.log(err))
         })
     }
@@ -28,7 +28,8 @@ function ProductCreate() {
         </div>
         <div>
             <label htmlFor='price'>Poduct Price:</label>
-          <input type='text' name='price' className='form-control' onChange={e=>setInputData({...inputData,price:e.target.value})}></input>
+          <input type='number' name='price' className='form-control' step='0.01' onChange={e=>setInputData({...inputData,price:e.target.value})}></input>
+
         </div><br/>
        <button className='btn btn-info'>Submit</button>
        </form>

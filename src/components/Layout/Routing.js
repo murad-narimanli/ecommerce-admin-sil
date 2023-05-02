@@ -1,7 +1,7 @@
 import {Routes, Route} from "react-router-dom";
 import Home from "../pages/Home";
 import NoPage from "../elements/NoPage";
-import Categories from "../pages/Admin/Categories/Categories";
+import Category from "../pages/Admin/Categories/Category";
 import MainSlider from "../pages/Slider/MainSlider";
 import Seasonaloffers from "../pages/Slider/Seasonaloffers"
 import Chooseyouslider from "../pages/Slider/Chooseyouslider";
@@ -16,11 +16,12 @@ import BlogDetail from "../pages/Blog/BlogDetails"
 import ProductView from "../pages/Content/Products/ProductView";
 import ProductCreate from "../pages/Content/Products/ProductCreate";
 import ProductEdit from "../pages/Content/Products/ProductEdit";
+import Stockproduct from "../pages/Admin/Stockproduct"
 const Routing = () => {
     return (
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/categories" element={<Categories />} />
+            <Route path="/category" element={<Category/>} />
             <Route path="/productview" element={<ProductView />} />
             <Route path="/mainslider" element={<MainSlider />} />
             <Route path="/title" element={<Title />} />
@@ -36,7 +37,7 @@ const Routing = () => {
 
             <Route path="productcreate" element={<ProductCreate/>}/>
             <Route path="productupdate/:id" element={<ProductEdit/>}/>
-
+            <Route path="productstock" element={<Stockproduct/>}/>
 
 
 

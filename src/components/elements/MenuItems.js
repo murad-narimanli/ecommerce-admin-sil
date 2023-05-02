@@ -50,7 +50,7 @@ const MenuItems = () =>{
                         }
                     >
                         <Menu.Item key="11">
-                            <Link  className='text-decoration-none' to={`/categories`}>
+                            <Link  className='text-decoration-none' to={`/category`}>
                                 <span> Categories </span>
                             </Link>
                         </Menu.Item>
@@ -159,6 +159,22 @@ const MenuItems = () =>{
                         </Menu.Item>
 
                         </SubMenu>
+                        <SubMenu
+                        key="60"
+                        title={
+                            <span>
+                            <FundOutlined />
+                            <span>Stock product</span>
+                            </span>
+                        }
+                    > <Menu.Item key="53">
+                    <Link className='text-decoration-none' to={`/productstock`}>
+                        <span>Stock products </span>
+                    </Link>
+                </Menu.Item>
+                        
+                       
+                       </SubMenu>
             </Menu>
         </>
     )

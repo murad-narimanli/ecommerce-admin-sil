@@ -20,6 +20,13 @@
       "text": "1112222",
       "date": "30/04/23",
       "id": 1
+    },
+    {
+      "title": "vvv",
+      "image": "https://i.pinimg.com/564x/42/78/36/4278360ceacc0cb7c443284263062897.jpg",
+      "text": "hh",
+      "date": "vvv",
+      "id": 2
     }
   ],
   "blogdetail": [
@@ -31,7 +38,6 @@
       "id": 1
     }
   ],
-  
   "title": [
     {
       "title": "<h2>RİFAHINIZ</h2> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <h2>MƏQSƏDİMİZDİR</h2> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <h4>Hər Zaman Xidmətinizdəyik!</h4>",
@@ -62,6 +68,65 @@
       "id": 1
     }
   ],
+  "category": [
+    {
+      "id": 1,
+      "name": "",
+      "description": ""
+    },
+    {
+      "id": 2,
+      "name": "",
+      "description": ""
+    },
+    {
+      "id": 3,
+      "name": "",
+      "description": ""
+    }
+  ],
+  "subcategory": [
+    {
+      "name": "test"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Kategori 1",
+      "order": 1
+    },
+    {
+      "id": 2,
+      "name": "Kategori 2",
+      "order": 2
+    },
+    {
+      "id": 3,
+      "name": "Kategori 3",
+      "order": 3
+    }
+  ],
+  "products": [
+    {
+      "id": 18,
+      "img": "https://www.adobe.com/express/feature/image/media_16ad2258cac6171d66942b13b8cd4839f0b6be6f3.png?width=2000&format=webply&optimize=medium",
+      "name": "sokolad",
+      "price": "3"
+    },
+    {
+      "name": "qatiq",
+      "price": "3.5",
+      "img": "https://i.pinimg.com/564x/97/67/37/97673721416cc6025a21c4c414030497.jpg",
+      "id": 19
+    },
+    {
+      "name": "sokolad",
+      "price": "6",
+      "img": "https://i.pinimg.com/564x/a2/7d/94/a27d94edb97b66caa9cda04f7428d715.jpg",
+      "id": 20
+    }
+  ],
   "users": [
     {
       "id": 1,
@@ -83,20 +148,6 @@
       "email": "xaliqe@gmail.com",
       "password": "xaliqe123456",
       "isAdmin": false
-    }
-  ],
-  "products": [
-    {
-      "id": 17,
-      "img": "C:\\fakepath\\1548529521_profil-ucun-sekil-yukle-derin-duygular-7.jpg",
-      "name": "sekil",
-      "price": "69"
-    },
-    {
-      "name": "sokolad",
-      "price": "3",
-      "img": "https://www.adobe.com/express/feature/image/media_16ad2258cac6171d66942b13b8cd4839f0b6be6f3.png?width=2000&format=webply&optimize=medium",
-      "id": 18
     }
   ]
 }

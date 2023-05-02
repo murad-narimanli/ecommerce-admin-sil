@@ -17,6 +17,18 @@ function ProductView() {
       .catch(err => console.log(err))
   },[])
 
+  function handleSubmit(id){
+    const conf= window.confirm("Do you want to delete?");
+    if(conf){
+      axios.delete('http://localhost:3030/products/'+id)
+        .then(res=>{
+          alert("product is deleted")
+          setRecords(records.filter(record => record.id !== id)) // update the state of records array
+        })
+        .catch(err=>console.log(err))
+    }
+  }
+
   return (
     <div className='container-mt-5'>
       <div className='text-end'><Link to="/productcreate" className='btn btn-primary'>Add +</Link></div>
@@ -50,18 +62,6 @@ function ProductView() {
       </table>
     </div>
   )
-
-  function handleSubmit(id){
-    const conf= window.confirm("Do you want to delete?");
-    if(conf){
-      axios.delete('http://localhost:3030/products/'+id)
-        .then(res=>{
-          alert("product is deleted")
-          navigate('/productview')
-        })
-        .catch(err=>console.log(err))
-    }
-  }
 }
 
 export default ProductView
