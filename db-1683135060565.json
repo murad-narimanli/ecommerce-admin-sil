@@ -1,0 +1,185 @@
+{
+  "sliderimages": [
+    {
+      "image": "https://images.pexels.com/photos/3985069/pexels-photo-3985069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "id": 1
+    },
+    {
+      "image": "https://images.pexels.com/photos/264636/pexels-photo-264636.jpeg",
+      "id": 2
+    },
+    {
+      "image": "https://images.pexels.com/photos/10574804/pexels-photo-10574804.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "id": 3
+    }
+  ],
+  "blog": [
+    {
+      "title": "Üzünüzə qulluq edin",
+      "image": "http://localhost:3002/static/media/blogimg0.8840dec6ef5110de291a.png",
+      "text": "1112222",
+      "date": "30/04/23",
+      "id": 1
+    },
+    {
+      "title": "vvv",
+      "image": "https://i.pinimg.com/564x/42/78/36/4278360ceacc0cb7c443284263062897.jpg",
+      "text": "hh",
+      "date": "vvv",
+      "id": 2
+    }
+  ],
+  "blogdetail": [
+    {
+      "title": "Üzünüzə qulluq edin",
+      "image": "http://localhost:3002/static/media/blogimg0.8840dec6ef5110de291a.png",
+      "text": "1112222",
+      "date": "30/04/23",
+      "id": 1
+    }
+  ],
+  "title": [
+    {
+      "title": "<h2>RİFAHINIZ</h2> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <h2>MƏQSƏDİMİZDİR</h2> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <h4>Hər Zaman Xidmətinizdəyik!</h4>",
+      "id": 1
+    }
+  ],
+  "vision": [
+    {
+      "vision": "<p>Şirkət olaraq viziyonumuz fəaliyyət göstərdiyimiz sahədə öz &nbsp;effektivliyilə seçilən və yüksək iqtisadi göstəricilərə malik olan lider şirkət olmaqdır.Oz əməkdaşlarının maddi , həmçinin iş şəraitinin yaxşılaşdırılması sahəsində əməli işlər görür&nbsp;</p>",
+      "id": 1
+    }
+  ],
+  "mission": [
+    {
+      "mission": "<p>Azərbaycan pərakəndə satış sektorunda daim gənc və inovativ şirkət olaraq müştərilərə yüksək keyfiyyətli qida və qeyri-qida məhsullarını sərfəli qiymətlə və peşəkar xidmətlə təqdim edərək onların həyat rifahını qaldırırıq.</p>",
+      "id": 1
+    }
+  ],
+  "aboutstore": [
+    {
+      "aboutstore": "<p>2009-cu ildə yaranan \"ANC GROUP\" MMC-nin tərkibində fəaliyyət göstərən \"Bravo\" supermarketlər şəbəkəsi və “Port Baku Bazar” market hər zaman müştəri məmnuniyyətinin artırılması və xidmət səviyyəsinin yaxşılaşdırılması üçün çalışır.</p>",
+      "id": 1
+    }
+  ],
+  "discountnews": [
+    {
+      "discountnews": "<p>Bravo bonus kartla endirim əldə edin.</p>",
+      "id": 1
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Kategori 1",
+      "order": 1
+    },
+    {
+      "id": 2,
+      "name": "Kategori 2",
+      "order": 2
+    },
+    {
+      "id": 3,
+      "name": "Kategori 3",
+      "order": 3
+    },
+    {
+      "id": 4,
+      "name": "aaaa",
+      "description": ""
+    },
+    {
+      "id": 5,
+      "name": "heyyyaatt",
+      "description": ""
+    },
+    {
+      "id": 6,
+      "name": "fffffffff",
+      "description": ""
+    }
+  ],
+  "products": [
+    {
+      "id": 18,
+      "img": "https://www.adobe.com/express/feature/image/media_16ad2258cac6171d66942b13b8cd4839f0b6be6f3.png?width=2000&format=webply&optimize=medium",
+      "name": "sokolad",
+      "price": "3"
+    },
+    {
+      "name": "qatiq",
+      "price": "3.5",
+      "img": "https://i.pinimg.com/564x/97/67/37/97673721416cc6025a21c4c414030497.jpg",
+      "id": 19
+    },
+    {
+      "name": "sokolad",
+      "price": "6",
+      "img": "https://i.pinimg.com/564x/a2/7d/94/a27d94edb97b66caa9cda04f7428d715.jpg",
+      "id": 20
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "Zumrud",
+      "email": "zumrudbaxshaliyeva@gmail.com",
+      "password": "zumrud123456",
+      "isAdmin": true
+    },
+    {
+      "id": 2,
+      "username": "Elyana",
+      "email": "elyana@gmail.com",
+      "password": "elyana123456",
+      "isAdmin": false
+    },
+    {
+      "id": 3,
+      "username": "Xaliqe",
+      "email": "xaliqe@gmail.com",
+      "password": "xaliqe123456",
+      "isAdmin": false
+    }
+  ],
+  "order": [
+    {
+      "order": {
+        "firstName": "Xaliqe",
+        "lastName": "nnj@gmail.com",
+        "phone": "+994 70 827 60 08",
+        "note": "xcaxc\\x\\c"
+      },
+      "products": [
+        {
+          "id": 2,
+          "name": "KENDIMIZ BAL 700 GR AKASIYA...",
+          "price": 3.19,
+          "quantity": 20,
+          "img": "../assets/image/product1.jpg",
+          "count": 2
+        }
+      ],
+      "id": 1
+    },
+    {
+      "order": {
+        "firstName": "Xaliqe ",
+        "lastName": "nnj@gmail.com",
+        "phone": "+994 70 827 60 08",
+        "": "hhhh"
+      },
+      "products": [
+        {
+          "name": "sokolad",
+          "price": "6",
+          "img": "https://i.pinimg.com/564x/a2/7d/94/a27d94edb97b66caa9cda04f7428d715.jpg",
+          "id": 20,
+          "count": 2
+        }
+      ],
+      "id": 2
+    }
+  ]
+}
