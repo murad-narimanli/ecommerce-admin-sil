@@ -313,67 +313,152 @@
 
 // export default Category;
 
+// import React, { useState, useEffect, useRef } from "react";
+// import client from "../../../../api/api"
+
+// function Category() {
+//   const [categoryName, setCategoryName] = useState("");
+//   const [categoryDescription, setCategoryDescription] = useState("");
+//   const [categories, setCategories] = useState([]);
+//   const [id, setId] = useState(null);
+//   const formRef = useRef (null)
+
+
+
+  
+
+//   useEffect(() => {
+//         getData();
+//       }, []);
+    
+//       const getData = async () => {
+//         await client.get("categories").then((res) => {
+//           if (res.data.length) {
+//             setCategories(res.data);
+//           }
+//         });
+//       };
+
+
+
+//       const onFinish = (values) => {
+//         if (id) {
+//           client.put(`categories/${id}`, values).then(() => {
+//             console.log("Data updated successfully");
+//             getData();
+//           });
+//         } else {
+//           const newData = [
+//             ...categories,
+//             {
+//               id: categories.length + 1,
+//               category: Category,
+//               ...values,
+//             },
+//           ];
+//           client.post("categories", values).then(() => {
+//             console.log("Data added successfully");
+//             getData();
+//           });
+//       setCategories(newData);
+//         }
+//         setId(null);
+    
+//         formRef.current.resetFields();
+//       };
+    
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     setCategories([
+//       ...categories,
+//       { name: categoryName, description: categoryDescription },
+//     ]);
+//     setCategoryName("");
+//     setCategoryDescription("");
+//   };
+
+//   return (
+//     <div>
+//       <h1>Admin Panel</h1>
+//       <form onSubmit={handleSubmit}>
+//         <label htmlFor="category-name">Category Name</label>
+//         <input
+//           type="text"
+//           id="category-name"
+//           value={categoryName}
+//           onChange={(e) => setCategoryName(e.target.value)}
+//         />
+
+//         <label htmlFor="category-description">Category Description</label>
+//         <textarea
+//           id="category-description"
+//           value={categoryDescription}
+//           onChange={(e) => setCategoryDescription(e.target.value)}
+//         />
+
+//         <button type="submit">Add Category</button>
+//       </form>
+
+//       {categories.length > 0 && (
+//         <ul>
+//           {categories.map((categories, index) => (
+//             <li key={index}>
+//               <h2>{categories.name}</h2>
+//               <p>{categories.description}</p>
+//             </li>
+//           ))}
+//         </ul>
+//       )}
+//     </div>
+//   );
+// }
+
+// export default Category;
+
 import React, { useState, useEffect, useRef } from "react";
-import client from "../../../../api/api"
+import client from "../../../../api/api";
 
 function Category() {
   const [categoryName, setCategoryName] = useState("");
   const [categoryDescription, setCategoryDescription] = useState("");
   const [categories, setCategories] = useState([]);
   const [id, setId] = useState(null);
-  const formRef = useRef (null)
-
-
-
-  
+  const formRef = useRef(null);
 
   useEffect(() => {
-        getData();
-      }, []);
-    
-      const getData = async () => {
-        await client.get("category").then((res) => {
-          if (res.data.length) {
-            setCategories(res.data);
-          }
-        });
-      };
+    getData();
+  }, []);
 
+  const getData = async () => {
+    await client.get("categories").then((res) => {
+      if (res.data.length) {
+        setCategories(res.data);
+      }
+    });
+  };
 
-
-      const onFinish = (values) => {
-        if (id) {
-          client.put(`category/${id}`, values).then(() => {
-            console.log("Data updated successfully");
-            getData();
-          });
-        } else {
-          const newData = [
-            ...categories,
-            {
-              id: categories.length + 1,
-              category: Category,
-              ...values,
-            },
-          ];
-          client.post("category", values).then(() => {
-            console.log("Data added successfully");
-            getData();
-          });
-      setCategories(newData);
-        }
-        setId(null);
-    
-        formRef.current.resetFields();
-      };
-    
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setCategories([
-      ...categories,
-      { name: categoryName, description: categoryDescription },
-    ]);
+    const newCategory = {
+      id: categories.length + 1,
+      name: categoryName,
+      description: categoryDescription,
+    };
+
+    if (id) {
+      await client.put(`categories/${id}`, newCategory).then(() => {
+        console.log("Data updated successfully");
+        getData();
+      });
+    } else {
+      await client.post("categories", newCategory).then(() => {
+        console.log("Data added successfully");
+        getData();
+      });
+    }
+
+    setId(null);
     setCategoryName("");
     setCategoryDescription("");
   };
@@ -416,3 +501,4 @@ function Category() {
 
 export default Category;
 
+ 

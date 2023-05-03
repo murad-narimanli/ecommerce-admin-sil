@@ -68,28 +68,6 @@
       "id": 1
     }
   ],
-  "category": [
-    {
-      "id": 1,
-      "name": "",
-      "description": ""
-    },
-    {
-      "id": 2,
-      "name": "",
-      "description": ""
-    },
-    {
-      "id": 3,
-      "name": "",
-      "description": ""
-    }
-  ],
-  "subcategory": [
-    {
-      "name": "test"
-    }
-  ],
   "categories": [
     {
       "id": 1,
@@ -105,6 +83,21 @@
       "id": 3,
       "name": "Kategori 3",
       "order": 3
+    },
+    {
+      "id": 4,
+      "name": "aaaa",
+      "description": ""
+    },
+    {
+      "id": 5,
+      "name": "heyyyaatt",
+      "description": ""
+    },
+    {
+      "id": 6,
+      "name": "fffffffff",
+      "description": ""
     }
   ],
   "products": [
@@ -148,6 +141,45 @@
       "email": "xaliqe@gmail.com",
       "password": "xaliqe123456",
       "isAdmin": false
+    }
+  ],
+  "order": [
+    {
+      "order": {
+        "firstName": "Xaliqe",
+        "lastName": "nnj@gmail.com",
+        "phone": "+994 70 827 60 08",
+        "note": "xcaxc\\x\\c"
+      },
+      "products": [
+        {
+          "id": 2,
+          "name": "KENDIMIZ BAL 700 GR AKASIYA...",
+          "price": 3.19,
+          "quantity": 20,
+          "img": "../assets/image/product1.jpg",
+          "count": 2
+        }
+      ],
+      "id": 1
+    },
+    {
+      "order": {
+        "firstName": "Xaliqe ",
+        "lastName": "nnj@gmail.com",
+        "phone": "+994 70 827 60 08",
+        "": "hhhh"
+      },
+      "products": [
+        {
+          "name": "sokolad",
+          "price": "6",
+          "img": "https://i.pinimg.com/564x/a2/7d/94/a27d94edb97b66caa9cda04f7428d715.jpg",
+          "id": 20,
+          "count": 2
+        }
+      ],
+      "id": 2
     }
   ]
 }
