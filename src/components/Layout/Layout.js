@@ -4,43 +4,37 @@ import {
   UploadOutlined,
   UserOutlined,
   VideoCameraOutlined,
-} from '@ant-design/icons';
-import { Layout, Menu, theme , Avatar , Popover } from 'antd';
-import React, { useState } from 'react';
-import MenuItems from '../elements/MenuItems';
-import HeaderMain from './Header';
+} from "@ant-design/icons";
+import { Layout, Menu, theme, Avatar, Popover } from "antd";
+import React, { useState } from "react";
+import MenuItems from "../elements/MenuItems";
+import HeaderMain from "./Header";
 
 const { Header, Sider, Content } = Layout;
 
-
-
-
 const MainLayout = (props) => {
   const [collapsed, setCollapsed] = useState(false);
-
-
-  
 
   const {
     token: { colorBgContainer },
   } = theme.useToken();
 
   return (
-    <Layout className='main-layout'>
+    <Layout className="main-layout">
       <Sider trigger={null} collapsible collapsed={collapsed}>
-        <MenuItems/>
+        <MenuItems />
       </Sider>
       <Layout className="site-layout">
-       <HeaderMain 
-          colorBgContainer={colorBgContainer} 
-          setCollapsed={setCollapsed} 
+        <HeaderMain
+          colorBgContainer={colorBgContainer}
+          setCollapsed={setCollapsed}
           collapsed={collapsed}
-       />
-       <Content
+        />
+        <Content
           style={{
-            margin: '24px 16px',
+            margin: "24px 16px",
             padding: 24,
-            minHeight: '80vh',
+            minHeight: "80vh",
             background: colorBgContainer,
           }}
         >
@@ -52,4 +46,3 @@ const MainLayout = (props) => {
 };
 
 export default MainLayout;
-
