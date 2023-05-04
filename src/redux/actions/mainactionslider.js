@@ -8,7 +8,7 @@ export const getImage = () => async (dispatch) => {
       .then(response => {
         dispatch({
           type: Types.GET_IMAGE,
-          payload: { sliderimages: response.data.data },       
+          payload: { sliderimages: response.data.sliderimages }
         });
       })
       .catch((error)=>{

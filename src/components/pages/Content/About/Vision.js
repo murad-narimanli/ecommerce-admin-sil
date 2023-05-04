@@ -1,19 +1,14 @@
 import React, { useRef, useEffect, useState } from "react";
 import {
   Button,
-  Select,
   Form,
-  Input,
   Card,
   Row,
   Col,
-  Popconfirm,
-  message,
 } from "antd";
 import JoditEditor from "jodit-react";
 import {
   UnorderedListOutlined,
-  DeleteOutlined,
   EditOutlined,
 } from "@ant-design/icons";
 import client from "../../../../api/api";
@@ -79,24 +74,19 @@ const Vision = () => {
                       editData(d);
                     }}
                     key="edit"
+                    style={{ color: "#fff" }}
                   />,
                 ]}
               >
-                
-    
-                 {data.map((d) => (
+                {data.map((d) => (
                   <div>
                     <h6>Viziyonumuz</h6>
-                    <div dangerouslySetInnerHTML={{ __html:  d[`vision`] }} />
+                    <div dangerouslySetInnerHTML={{ __html: d[`vision`] }} />
                   </div>
                 ))}
-          
               </Card>
-             
             );
-           
           })}
-                 
         </Col>
         <Col md={24}>
           <div className="border pt-5 p-3">
@@ -122,7 +112,10 @@ const Vision = () => {
 
               <div className="d-flex">
                 <Form.Item>
-                  <Button type="primary" htmlType="submit">
+                  <Button
+                    style={{ background: "green", color: "#fff" }}
+                    htmlType="submit"
+                  >
                     {id ? "Edit" : "Add"}
                   </Button>
                 </Form.Item>
@@ -140,7 +133,6 @@ const Vision = () => {
             </Form>
           </div>
         </Col>
-      
       </Row>
     </div>
   );

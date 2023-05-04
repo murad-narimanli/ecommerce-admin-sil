@@ -2,7 +2,7 @@
 import { createStore, applyMiddleware, combineReducers } from "redux";
 import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
-import { categoryReducer, productReducer, AboutusimageReducer, loaderReducer, userReducer, imageReducer, } from "../redux/reducers";
+import { categoryReducer, productReducer, AboutusimageReducer, loaderReducer, userReducer, imageReducer } from "../redux/reducers";
  
 const rootReducer = combineReducers({
   categories: categoryReducer,

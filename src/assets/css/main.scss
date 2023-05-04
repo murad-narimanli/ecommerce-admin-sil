@@ -1,5 +1,5 @@
 .ant-layout-sider-children{
-  background-color: rgb(142 199 115);
+  background-color: green;
 }
 .site-layout .trigger {
   padding: 0 24px !important;
@@ -7,6 +7,12 @@
   line-height: 64px;
   cursor: pointer;
   transition: color 0.3s;
+}
+ul{
+  background-color: green !important;
+}
+li{
+  color: #ffffff;
 }
 
 .site-layout .trigger:hover {
@@ -31,6 +37,8 @@
 .main-layout{
   min-height: 100vh;
 }
+
+
 /* loader */
 .loaderFixed {
   position: fixed;
@@ -46,7 +54,7 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: blue;
+  background-color: rgb(0, 255, 64);
   z-index: 99999;
 }
 .loader,

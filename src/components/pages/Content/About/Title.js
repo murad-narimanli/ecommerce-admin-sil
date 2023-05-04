@@ -79,24 +79,19 @@ const Title = () => {
                       editData(d);
                     }}
                     key="edit"
+                    style={{color:"#fff"}}
                   />,
                 ]}
               >
-                
-    
-                 {data.map((d) => (
+                {data.map((d) => (
                   <div>
                     <h6>Başlıq</h6>
-                    <div dangerouslySetInnerHTML={{ __html:  d[`title`] }} />
+                    <div dangerouslySetInnerHTML={{ __html: d[`title`] }} />
                   </div>
                 ))}
-          
               </Card>
-             
             );
-           
           })}
-                 
         </Col>
         <Col md={24}>
           <div className="border pt-5 p-3">
@@ -122,7 +117,10 @@ const Title = () => {
 
               <div className="d-flex">
                 <Form.Item>
-                  <Button type="primary" htmlType="submit">
+                  <Button
+                    htmlType="submit"
+                    style={{ background: "green", color: "#fff" }}
+                  >
                     {id ? "Edit" : "Add"}
                   </Button>
                 </Form.Item>
@@ -140,7 +138,6 @@ const Title = () => {
             </Form>
           </div>
         </Col>
-      
       </Row>
     </div>
   );

@@ -1,156 +1,10 @@
-// import React, { useRef, useEffect, useState } from "react";
-// import {
-//   Button,
-//   Form,
-//   Card,
-//   Row,
-//   Col,
-//   Input
-// } from "antd";
-// import {
-//   UnorderedListOutlined,
-//   EditOutlined,
-//  } from "@ant-design/icons";
-// import client from "../../../api/api";
-// const {TextArea } = Input
-
-// const Blog = () => {
-//   const [data, setData] = useState([]);
-
-//   useEffect(() => {
-//     getData();
-//   }, []);
-
-//   const getData = async () => {
-//     await client.get("blog").then((res) => {
-//       if (res.data.length) {
-//         setData(res.data);
-//       }
-//     });
-//   };
-
-//   const formRef = useRef(null);
-
-//   const [id, setId] = useState(null);
-
-//   const onFinish = (values) => {
-//     client.put(`blog/1`, values).then((res) => {
-//       console.log("OK");
-//       getData();
-//     });
-//     formRef.current.resetFields();
-//   };
-
-//   const editData = (data) => {
-//     setId(data.id);
-//     const obj = {
-//       blog: data.blog,
-//     };
-//     formRef.current.setFieldsValue(obj);
-//   };
-
-//   const onFinishFailed = (errorInfo) => {
-//     console.log("Failed:", errorInfo);
-//   };
-
-//   return (
-//     <div>
-//       <Row gutter={[16, 16]}>
-//         <Col xs={24}>
-//           <div className="border p-3 mt-0 bg-white">
-//             <div className=" d-flex align-items-center page-name">
-//               <UnorderedListOutlined className="me-2" />
-//               <span className="font-weight-bold">Haqqımızda</span>
-//             </div>
-//           </div>
-//         </Col>
-//         <Col md={12}>
-//           {data.map((d) => {
-//             return (
-//               <Card
-//                 style={{ width: "100%" }}
-//                 actions={[
-//                   <EditOutlined
-//                     onClick={() => {
-//                       editData(d);
-//                     }}
-//                     key="edit"
-//                   />,
-//                 ]}
-//               >
-
-//                  {data.map((d) => (
-//                   <div>
-//                     <h6>Haqqımızda</h6>
-//                     <p> {d[`blog`]} </p>
-//                   </div>
-//                 ))}
-
-//               </Card>
-
-//             );
-
-//           })}
-
-//         </Col>
-//         <Col md={12}>
-//           <div className="border pt-5 p-3">
-//             <Form
-//               ref={formRef}
-//               name="basic"
-//               onFinish={onFinish}
-//               onFinishFailed={onFinishFailed}
-//               autoComplete="off"
-//             >
-//               <Form.Item
-//                 label={"Mətn"}
-//                 name="blog"
-//                 rules={[
-//                   {
-//                     required: true,
-//                     message: "Please input content!",
-//                   },
-//                 ]}
-//               >
-//             <TextArea placeholder='Title' />
-
-//               </Form.Item>
-
-//               <div className="d-flex">
-//                 <Form.Item>
-//                   <Button type="primary" htmlType="submit">
-//                     {id ? "Edit" : "Add"}
-//                   </Button>
-//                 </Form.Item>
-
-//                 <Button
-//                   onClick={() => {
-//                     setId(null);
-//                     formRef.current.resetFields();
-//                   }}
-//                   className="ms-3"
-//                 >
-//                   Cancel
-//                 </Button>
-//               </div>
-//             </Form>
-//           </div>
-//         </Col>
-
-//       </Row>
-//     </div>
-//   );
-// };
-
-// export default Blog;
-
 import React, { useRef, useEffect, useState } from "react";
 import { Button, Form, Card, Row, Col, Input } from "antd";
 import { UnorderedListOutlined, EditOutlined } from "@ant-design/icons";
 import client from "../../../api/api";
 const { TextArea } = Input;
 
-const Blog = () => {
+const BlogDetail = () => {
   const [data, setData] = useState([]);
   const formRef = useRef(null);
   const [id, setId] = useState(null);
@@ -161,7 +15,7 @@ const Blog = () => {
   }, []);
 
   const getData = async () => {
-    await client.get("blog").then((res) => {
+    await client.get("blogdetail").then((res) => {
       if (res.data.length) {
         setData(res.data);
       }
@@ -170,7 +24,7 @@ const Blog = () => {
 
   const onFinish = (values) => {
     if (id) {
-      client.put(`blog/${id}`, values).then(() => {
+      client.put(`blogdetail/${id}`, values).then(() => {
         console.log("Data updated successfully");
         getData();
       });
@@ -183,7 +37,7 @@ const Blog = () => {
           ...values,
         },
       ];
-      client.post("blog", values).then(() => {
+      client.post("blogdetail", values).then(() => {
         console.log("Data added successfully");
         getData();
       });
@@ -207,7 +61,7 @@ const Blog = () => {
   };
 
   const deleteData = (id) => {
-    client.delete(`blog/${id}`).then(() => {
+    client.delete(`blogdetail/${id}`).then(() => {
       console.log("Data deleted successfully");
       getData();
     });
@@ -247,7 +101,7 @@ const Blog = () => {
                       deleteData(d.id);
                     }}
                     key="delete"
-                    type="success"
+                    type="subbit"
                     style={{ color: "#fff" }}
                   >
                     Delete
@@ -307,11 +161,8 @@ const Blog = () => {
             </Form.Item>
 
             <Form.Item>
-              <Button
-                type="success"
-                htmlType="submit"
-                style={{ background: "green", color: "#fff" }}
-              >
+                
+              <Button type="success" htmlType="submit" style={{ background: "green", color: "#fff" }}>
                 {id ? "Update" : "Submit"}
               </Button>
             </Form.Item>
@@ -322,4 +173,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default BlogDetail;

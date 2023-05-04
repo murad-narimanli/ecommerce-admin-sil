@@ -1,21 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
-import {
-  Button,
-  Select,
-  Form,
-  Input,
-  Card,
-  Row,
-  Col,
-  Popconfirm,
-  message,
-} from "antd";
+import { Button, Form, Card, Row, Col } from "antd";
 import JoditEditor from "jodit-react";
-import {
-  UnorderedListOutlined,
-  DeleteOutlined,
-  EditOutlined,
-} from "@ant-design/icons";
+import { UnorderedListOutlined, EditOutlined } from "@ant-design/icons";
 import client from "../../../../api/api";
 
 const Aboutstore = () => {
@@ -79,24 +65,21 @@ const Aboutstore = () => {
                       editData(d);
                     }}
                     key="edit"
+                    style={{ color: "#fff" }}
                   />,
                 ]}
               >
-                
-    
-                 {data.map((d) => (
+                {data.map((d) => (
                   <div>
                     <h6>Haqqımızda</h6>
-                    <div dangerouslySetInnerHTML={{ __html:  d[`aboutstore`] }} />
+                    <div
+                      dangerouslySetInnerHTML={{ __html: d[`aboutstore`] }}
+                    />
                   </div>
                 ))}
-          
               </Card>
-             
             );
-           
           })}
-                 
         </Col>
         <Col md={24}>
           <div className="border pt-5 p-3">
@@ -122,7 +105,10 @@ const Aboutstore = () => {
 
               <div className="d-flex">
                 <Form.Item>
-                  <Button type="primary" htmlType="submit">
+                  <Button
+                    style={{ background: "green", color: "#fff" }}
+                    htmlType="submit"
+                  >
                     {id ? "Edit" : "Add"}
                   </Button>
                 </Form.Item>
@@ -140,7 +126,6 @@ const Aboutstore = () => {
             </Form>
           </div>
         </Col>
-      
       </Row>
     </div>
   );
