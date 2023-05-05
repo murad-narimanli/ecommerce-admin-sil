@@ -150,6 +150,7 @@ function ProductView() {
   }
 
   return (
+  
     <div className='container mt-5'>
       <div className='text-end'>
         <Link to='/productcreate' className='btn btn-primary'>
@@ -170,7 +171,7 @@ function ProductView() {
         <tbody>{records.map((product) => renderProductRow(product))}</tbody>
       </table>
     </div>
-  );
-}
+    </div>
+  )}
 
 export default ProductView;
