@@ -145,41 +145,25 @@
   ],
   "order": [
     {
-      "order": {
-        "firstName": "Xaliqe",
-        "lastName": "nnj@gmail.com",
-        "phone": "+994 70 827 60 08",
-        "note": "xcaxc\\x\\c"
+      "infos": {
+        "fullName": "zumrud",
+        "email": "zumrudbaxsaliyeva@gmail.com",
+        "phone": "9999999999999999999",
+        "card": "55555555555555555",
+        "region": "6",
+        "address": "wlopqpodwj",
+        "note": "hi everyone"
       },
       "products": [
         {
-          "id": 2,
-          "name": "KENDIMIZ BAL 700 GR AKASIYA...",
-          "price": 3.19,
-          "quantity": 20,
-          "img": "../assets/image/product1.jpg",
-          "count": 2
+          "name": "qatiq",
+          "price": "3.5",
+          "img": "https://i.pinimg.com/564x/97/67/37/97673721416cc6025a21c4c414030497.jpg",
+          "id": 19,
+          "count": 1
         }
       ],
       "id": 1
-    },
-    {
-      "order": {
-        "firstName": "Xaliqe ",
-        "lastName": "nnj@gmail.com",
-        "phone": "+994 70 827 60 08",
-        "": "hhhh"
-      },
-      "products": [
-        {
-          "name": "sokolad",
-          "price": "6",
-          "img": "https://i.pinimg.com/564x/a2/7d/94/a27d94edb97b66caa9cda04f7428d715.jpg",
-          "id": 20,
-          "count": 2
-        }
-      ],
-      "id": 2
     }
   ]
 }

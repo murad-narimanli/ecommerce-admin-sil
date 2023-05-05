@@ -17,6 +17,7 @@ import ProductView from "../pages/Content/Products/ProductView";
 import ProductCreate from "../pages/Content/Products/ProductCreate";
 import ProductEdit from "../pages/Content/Products/ProductEdit";
 import Stockproduct from "../pages/Admin/Stockproduct"
+import OrderInfo from "../pages/Admin/OrderInfo";
 const Routing = () => {
     return (
         <Routes>
@@ -38,7 +39,7 @@ const Routing = () => {
             <Route path="productcreate" element={<ProductCreate/>}/>
             <Route path="productupdate/:id" element={<ProductEdit/>}/>
             <Route path="productstock" element={<Stockproduct/>}/>
-
+            <Route path="orderinfo" element={<OrderInfo/>}/>
 
 
 
