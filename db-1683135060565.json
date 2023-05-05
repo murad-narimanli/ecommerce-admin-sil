@@ -70,49 +70,34 @@
   ],
   "categories": [
     {
-      "name": "Un və Qənnadı məhsulları",
-      "visible": false,
-      "id": 2
+      "id": 1,
+      "name": "Kategori 1",
+      "order": 1
     },
     {
-      "name": "Süd məhsulları və Yumurtalar",
-      "visible": true,
-      "id": 3
+      "id": 2,
+      "name": "Kategori 2",
+      "order": 2
     },
     {
-      "name": "Meyvə və Tərəvəz",
-      "visible": true,
-      "id": 4
+      "id": 3,
+      "name": "Kategori 3",
+      "order": 3
     },
     {
-      "name": "Körpə və Uşaqlar",
-      "visible": true,
-      "id": 5
+      "id": 4,
+      "name": "aaaa",
+      "description": ""
     },
     {
-      "name": "Baqqaliyə",
-      "visible": true,
-      "id": 6
+      "id": 5,
+      "name": "heyyyaatt",
+      "description": ""
     },
     {
-      "name": "İri məişət texnikası",
-      "visible": true,
-      "id": 7
-    },
-    {
-      "name": "Ev təmizləyici vasitələri",
-      "visible": true,
-      "id": 8
-    },
-    {
-      "name": "Şirniyyat",
-      "visible": true,
-      "id": 9
-    },
-    {
-      "name": "Məişət texnikası",
-      "visible": true,
-      "id": 10
+      "id": 6,
+      "name": "fffffffff",
+      "description": ""
     }
   ],
   "products": [
@@ -160,26 +145,41 @@
   ],
   "order": [
     {
-      "infos": {
-        "id": 1,
-        "fullName": "zumrud",
-        "email": "zumrudbaxsaliyeva@gmail.com",
-        "phone": "9999999999999999999",
-        "card": "55555555555555555",
-        "region": "6",
-        "address": "wlopqpodwj",
-        "note": "hi everyone"
+      "order": {
+        "firstName": "Xaliqe",
+        "lastName": "nnj@gmail.com",
+        "phone": "+994 70 827 60 08",
+        "note": "xcaxc\\x\\c"
       },
       "products": [
         {
-          "id": 19,
-          "img": "https://i.pinimg.com/564x/97/67/37/97673721416cc6025a21c4c414030497.jpg",
-          "name": "qatiq",
-          "price": "3.5",
-          "count": 1
+          "id": 2,
+          "name": "KENDIMIZ BAL 700 GR AKASIYA...",
+          "price": 3.19,
+          "quantity": 20,
+          "img": "../assets/image/product1.jpg",
+          "count": 2
         }
       ],
       "id": 1
+    },
+    {
+      "order": {
+        "firstName": "Xaliqe ",
+        "lastName": "nnj@gmail.com",
+        "phone": "+994 70 827 60 08",
+        "": "hhhh"
+      },
+      "products": [
+        {
+          "name": "sokolad",
+          "price": "6",
+          "img": "https://i.pinimg.com/564x/a2/7d/94/a27d94edb97b66caa9cda04f7428d715.jpg",
+          "id": 20,
+          "count": 2
+        }
+      ],
+      "id": 2
     }
   ]
 }
