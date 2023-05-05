@@ -3,9 +3,6 @@ import Home from "../pages/Home";
 import NoPage from "../elements/NoPage";
 import Category from "../pages/Admin/Categories/Category";
 import MainSlider from "../pages/Slider/MainSlider";
-import Seasonaloffers from "../pages/Slider/Seasonaloffers"
-import Chooseyouslider from "../pages/Slider/Chooseyouslider";
-import Weekoffers from "../pages/Slider/Weekoffers";
 import Blog from "../pages/Blog/Blog";
 import Discountnews from "../pages/Blog/Discountnew";
 import Title from "../pages/Content/About/Title";
@@ -30,9 +27,6 @@ const Routing = () => {
             <Route path="/mission" element={<Mission />} />
             <Route path="/aboutstore" element={<Aboutstore />} />
             <Route path="/blogdetail/:id" element={<BlogDetail />} />
-            <Route path="/seasonaloffers" element={<Seasonaloffers />} />
-            <Route path="/chooseyouslider" element={<Chooseyouslider />} />
-            <Route path="/weekoffers" element={<Weekoffers />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/discountnews" element={<Discountnews />} />
             <Route path="productcreate" element={<ProductCreate/>}/>

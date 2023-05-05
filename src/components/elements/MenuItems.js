@@ -110,21 +110,7 @@ const MenuItems = () => {
               <span> Əsas Slider </span>
             </Link>
           </Menu.Item>
-          <Menu.Item key="42">
-            <Link className="text-decoration-none" to={`/seasonaloffers`}>
-              <span> Sezon Təklifləri Slider </span>
-            </Link>
-          </Menu.Item>
-          <Menu.Item key="43">
-            <Link className="text-decoration-none" to={`/chooseyouslider`}>
-              <span> Sizin üçün seçdiklərimiz </span>
-            </Link>
-          </Menu.Item>
-          <Menu.Item key="44">
-            <Link className="text-decoration-none" to={`/weekoffers`}>
-              <span>Həftənin Təklifləri Slider </span>
-            </Link>
-          </Menu.Item>
+         
         </SubMenu>
         <SubMenu
           key="50"
