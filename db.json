@@ -70,34 +70,49 @@
   ],
   "categories": [
     {
-      "id": 1,
-      "name": "Kategori 1",
-      "order": 1
+      "name": "Un və Qənnadı məhsulları",
+      "visible": false,
+      "id": 2
     },
     {
-      "id": 2,
-      "name": "Kategori 2",
-      "order": 2
+      "name": "Süd məhsulları və Yumurtalar",
+      "visible": true,
+      "id": 3
     },
     {
-      "id": 3,
-      "name": "Kategori 3",
-      "order": 3
+      "name": "Meyvə və Tərəvəz",
+      "visible": true,
+      "id": 4
     },
     {
-      "id": 4,
-      "name": "aaaa",
-      "description": ""
+      "name": "Körpə və Uşaqlar",
+      "visible": true,
+      "id": 5
     },
     {
-      "id": 5,
-      "name": "heyyyaatt",
-      "description": ""
+      "name": "Baqqaliyə",
+      "visible": true,
+      "id": 6
     },
     {
-      "id": 6,
-      "name": "fffffffff",
-      "description": ""
+      "name": "İri məişət texnikası",
+      "visible": true,
+      "id": 7
+    },
+    {
+      "name": "Ev təmizləyici vasitələri",
+      "visible": true,
+      "id": 8
+    },
+    {
+      "name": "Şirniyyat",
+      "visible": true,
+      "id": 9
+    },
+    {
+      "name": "Məişət texnikası",
+      "visible": true,
+      "id": 10
     }
   ],
   "products": [
@@ -147,7 +162,7 @@
     {
       "order": {
         "firstName": "Xaliqe",
-        "lastName": "nnj@gmail.com",
+        "email": "nnj@gmail.com",
         "phone": "+994 70 827 60 08",
         "note": "xcaxc\\x\\c"
       },
@@ -180,6 +195,24 @@
         }
       ],
       "id": 2
+    },
+    {
+      "order": {
+        "firstName": "Xaliqe Ibrahimli",
+        "lastName": "xaliqamammadova@gmail.com",
+        "phone": "+994 70 827 60 08",
+        "": "note"
+      },
+      "products": [
+        {
+          "name": "qatiq",
+          "price": "3.5",
+          "img": "https://i.pinimg.com/564x/97/67/37/97673721416cc6025a21c4c414030497.jpg",
+          "id": 19,
+          "count": 2
+        }
+      ],
+      "id": 3
     }
   ]
 }

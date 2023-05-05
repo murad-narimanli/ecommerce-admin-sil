@@ -1,504 +1,188 @@
-// import React , {useRef , useState} from 'react';
-// import { Button, Select, Form, Input, InputNumber  , Row , Col } from 'antd';
-// import { ProductCategories } from '../../../../const/data';
-// import CollapsData from '../../../elements/CollapsData';
-// import { addProduct , editProduct , deleteProduct  } from '../../../../redux/actions';
-// import { connect } from 'react-redux';
-// import {
-//     UnorderedListOutlined,
-//   } from '@ant-design/icons';
 
-// const {Option} = Select
-
-// const Categories = ( { addProduct , editProduct , deleteProduct , products  } ) => {
-//     const formRef = useRef(null);
-
-//     const [id , setId] = useState(null)
-
-//     const onFinish = (values) => {
-//        if(id){
-//             editProduct({
-//                 ...values,
-//                 id
-//             })
-//             setTimeout(() => {
-//                 setId(null)
-//             }, 500);
-//        }
-//        else{
-//             let obj = {
-//                 ...values,
-//             }
-//             console.log(obj)
-//             addProduct(obj)
-//        }
-//        formRef.current.resetFields()
-//     };
-    
-
-//     const editProd = (id) =>{
-
-//         let product = products.find((f)=> f.id === id)
-
-        
-//         formRef.current.setFieldsValue({
-//             ...product
-//         })
-
-//         setId(id)
-//     }
-
-//     const onFinishFailed = (errorInfo) => {
-//         console.log('Failed:', errorInfo);
-//     };
-
-//     return (
-//         <div >
-
-//             <Row gutter={[16,16]}>
-//                 <Col xs={24}>
-//                     <div className="border p-3 mt-0 bg-white">
-//                         <div className=" d-flex align-items-center page-name">
-//                             <UnorderedListOutlined className="me-2" />
-//                             <span className="font-weight-bold">Categories</span>
-//                         </div>
-//                     </div>
-//                 </Col>
-//                 <Col md={12}>
-//                      <CollapsData
-//                         deleteProduct={deleteProduct}
-//                         editProd={editProd}
-//                      />                     
-//                 </Col>
-//                 <Col  md={12}>
-//                     <div className='border pt-5 p-3'>
-//                         <Form
-//                             ref={formRef}
-//                             name="basic"
-//                             onFinish={onFinish}
-//                             onFinishFailed={onFinishFailed}
-//                             autoComplete="off"
-//                         >
-//                             <Form.Item
-//                                 name="name"
-//                                 rules={[
-//                                     {
-//                                         required: true,
-//                                         message: 'Please input name!',
-//                                     },
-//                                 ]}
-//                             >
-//                             <Input placeholder='name' />
-//                             </Form.Item>
-                       
-//                             <Form.Item
-//                                 name="tags"
-//                                 rules={[
-//                                     {
-//                                         required: true,
-//                                         message: 'Please input your tags!',
-//                                     },
-//                                 ]}
-//                             >
-//                                 <Select
-//                                     mode="multiple"
-//                                     size={'md'}
-//                                     placeholder="Please select tags"
-//                                     style={{ width: '100%' }}
-//                                 >
-//                                     {ProductCategories.map((cat)=>{
-//                                         return (
-//                                             <Option value={cat}>{cat}</Option>
-//                                         )
-//                                     })}
-//                                 </Select>
-//                             </Form.Item>
-
-//                         <div className='d-flex'>
-//                                 <Form.Item
-//                                 >
-//                                     <Button type="primary" htmlType="submit">
-//                                         {id ? 'Edit' : 'Add'}
-//                                     </Button>
-//                                 </Form.Item>
-
-//                                 <Button onClick={()=>{
-//                                     setId(null)
-//                                     formRef.current.resetFields()
-//                                 }} className='ms-3'>
-//                                     Cancel
-//                                 </Button>     
-//                         </div>
-//                         </Form>
-//                     </div>
-//                 </Col>
-                
-//             </Row>
-            
-//         </div>
-//     )
-// };
-
-
-
-// const mapStateToProps = (state) => ({
-//     products: state.products
-// })
-
-
-// export default connect(mapStateToProps  , { addProduct , editProduct , deleteProduct   })(Categories)
-
-// import React, { useRef, useEffect, useState } from "react";
-// import {
-//   Button,
-//   Form,
-//   Card,
-//   Row,
-//   Col,
-//   Input,
-// } from "antd";
-// import {
-//   UnorderedListOutlined,
-//   EditOutlined,
-// } from "@ant-design/icons";
-// import client from "../../../../api/api";
-// const { TextArea } = Input;
-
-// const Category = () => {
-//   const [data, setData] = useState([]);
-//   const formRef = useRef(null);
-//   const [id, setId] = useState(null);
-//   const [date, setDate] = useState(null);
-
-
-//   useEffect(() => {
-//     getData();
-//   }, []);
-
-//   const getData = async () => {
-//     await client.get("category").then((res) => {
-//       if (res.data.length) {
-//         setData(res.data);
-//       }
-//     });
-//   };
-
-//   const onFinish = (values) => {
-//     if (id) {
-//       client.put(`category/${id}`, values).then(() => {
-//         console.log("Data updated successfully");
-//         getData();
-//       });
-//     } else {
-//       const newData = [
-//         ...data,
-//         {
-//           id: data.length + 1,
-//           date: date,
-//           ...values,
-//         },
-//       ];
-//       client.post("category", values).then(() => {
-//         console.log("Data added successfully");
-//         getData();
-//       });
-//       setData(newData);
-//     }
-//     setId(null);
-//     setDate(null);
-
-//     formRef.current.resetFields();
-//   };
-
-//   const editData = (data) => {
-//     setId(data.id);
-//     setDate(data.date);
-//     const obj = {
-//       text: data.text,
-//       image: data.image,
-//       text: data.text,
-//     };
-//     formRef.current.setFieldsValue(obj);
-//   };
-
-//   const deleteData = (id) => {
-//     client.delete(`category/${id}`).then(() => {
-//       console.log("Data deleted successfully");
-//       getData();
-//     });
-//   };
-
-//   const onFinishFailed = (errorInfo) => {
-//     console.log("Failed:", errorInfo);
-//   };
-
-//   return (
-//     <div>
-//       <Row gutter={[16, 16]}>
-//         <Col xs={24}>
-//           <div className="border p-3 mt-0 bg-white">
-//             <div className=" d-flex align-items-center page-name">
-//               <UnorderedListOutlined className="me-2" />
-//               <span className="font-weight-bold">Data</span>
-//             </div>
-//           </div>
-//         </Col>
-//         <Col md={12}>
-//           {data.map((d) => {
-//             return (
-//               <Card
-//                 key={d.id}
-//                 style={{ width: "100%" }}
-//                 actions={[
-//                   <EditOutlined
-//                     onClick={() => {
-//                       editData(d);
-//                     }}
-//                     key="edit"
-//                   />,
-//                   <Button
-//                     onClick={() => {
-//                       deleteData(d.id);
-//                     }}
-//                     key="delete"
-//                   >
-//                     Delete
-//                   </Button>,
-//                 ]}
-//               >
-//                           <div className="mb-2">
-              
-//           </div>
-          
-//           <p>{d.text}</p>
-         
-
-//           </Card>
-//         );
-//       })}
- 
-
-//     </Col>
-//     <Col md={12}>
-//       <Form
-//         name="basic"
-//         onFinish={onFinish}
-//         onFinishFailed={onFinishFailed}
-//         ref={formRef}
-//       >
-      
-
-       
-
-//         <Form.Item
-//           label="Text"
-//           name="text"
-//           rules={[{ required: true, message: "Please input text!" }]}
-//         >
-//           <TextArea />
-//         </Form.Item>
-       
-
-//         <Form.Item>
-//           <Button type="primary" htmlType="submit">
-//             {id ? "Update" : "Submit"}
-//           </Button>
-//         </Form.Item>
-//       </Form>
-//     </Col>
-//   </Row>
-// </div>
-// );
-// };
-
-// export default Category;
-
-// import React, { useState, useEffect, useRef } from "react";
-// import client from "../../../../api/api"
-
-// function Category() {
-//   const [categoryName, setCategoryName] = useState("");
-//   const [categoryDescription, setCategoryDescription] = useState("");
-//   const [categories, setCategories] = useState([]);
-//   const [id, setId] = useState(null);
-//   const formRef = useRef (null)
-
-
-
-  
-
-//   useEffect(() => {
-//         getData();
-//       }, []);
-    
-//       const getData = async () => {
-//         await client.get("categories").then((res) => {
-//           if (res.data.length) {
-//             setCategories(res.data);
-//           }
-//         });
-//       };
-
-
-
-//       const onFinish = (values) => {
-//         if (id) {
-//           client.put(`categories/${id}`, values).then(() => {
-//             console.log("Data updated successfully");
-//             getData();
-//           });
-//         } else {
-//           const newData = [
-//             ...categories,
-//             {
-//               id: categories.length + 1,
-//               category: Category,
-//               ...values,
-//             },
-//           ];
-//           client.post("categories", values).then(() => {
-//             console.log("Data added successfully");
-//             getData();
-//           });
-//       setCategories(newData);
-//         }
-//         setId(null);
-    
-//         formRef.current.resetFields();
-//       };
-    
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     setCategories([
-//       ...categories,
-//       { name: categoryName, description: categoryDescription },
-//     ]);
-//     setCategoryName("");
-//     setCategoryDescription("");
-//   };
-
-//   return (
-//     <div>
-//       <h1>Admin Panel</h1>
-//       <form onSubmit={handleSubmit}>
-//         <label htmlFor="category-name">Category Name</label>
-//         <input
-//           type="text"
-//           id="category-name"
-//           value={categoryName}
-//           onChange={(e) => setCategoryName(e.target.value)}
-//         />
-
-//         <label htmlFor="category-description">Category Description</label>
-//         <textarea
-//           id="category-description"
-//           value={categoryDescription}
-//           onChange={(e) => setCategoryDescription(e.target.value)}
-//         />
-
-//         <button type="submit">Add Category</button>
-//       </form>
-
-//       {categories.length > 0 && (
-//         <ul>
-//           {categories.map((categories, index) => (
-//             <li key={index}>
-//               <h2>{categories.name}</h2>
-//               <p>{categories.description}</p>
-//             </li>
-//           ))}
-//         </ul>
-//       )}
-//     </div>
-//   );
-// }
-
-// export default Category;
-
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
+import { Table, Button, Modal, Form, Input, Switch} from "antd";
+import { PlusOutlined } from "@ant-design/icons";
 import client from "../../../../api/api";
 
-function Category() {
-  const [categoryName, setCategoryName] = useState("");
-  const [categoryDescription, setCategoryDescription] = useState("");
+const AdminPanel = () => {
   const [categories, setCategories] = useState([]);
-  const [id, setId] = useState(null);
-  const formRef = useRef(null);
+  const [clientCategories, setClientCategories] = useState([]);
+  const [categoryName, setCategoryName] = useState("");
+  const [visible, setVisible] = useState(true);
+  const [editingCategory, setEditingCategory] = useState(null);
+  const [editModalVisible, setEditModalVisible] = useState(false);
+  const [editedCategoryName, setEditedCategoryName] = useState("");
 
   useEffect(() => {
     getData();
   }, []);
 
   const getData = async () => {
-    await client.get("categories").then((res) => {
-      if (res.data.length) {
-        setCategories(res.data);
+    try {
+      const response = await client.get("categories");
+      if (response.data.length) {
+        setCategories(response.data);
+        setClientCategories(response.data);
       }
-    });
+    } catch (error) {
+      console.error(error);
+    }
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const newCategory = {
-      id: categories.length + 1,
-      name: categoryName,
-      description: categoryDescription,
-    };
+  const handleAddCategory = () => {
+    const newCategory = { name: categoryName, visible: true };
+    client.post("categories", newCategory)
+      .then(response => {
+        setCategories([...categories, response.data]);
+        setClientCategories([...clientCategories, response.data]);
+        setCategoryName("");
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  };
 
-    if (id) {
-      await client.put(`categories/${id}`, newCategory).then(() => {
-        console.log("Data updated successfully");
-        getData();
+  const handleDeleteCategory = (id) => {
+    client.delete(`categories/${id}`)
+      .then(response => {
+        const newCategories = categories.filter((category) => category.id !== id);
+        setCategories(newCategories);
+        const newClientCategories = clientCategories.filter((category) => category.id !== id);
+        setClientCategories(newClientCategories);
+      })
+      .catch(error => {
+        console.error(error);
       });
-    } else {
-      await client.post("categories", newCategory).then(() => {
-        console.log("Data added successfully");
-        getData();
-      });
+  };
+
+  const handleToggleVisibility = (id) => {
+    const category = categories.find((category) => category.id === id);
+    if (!category) {
+      console.error(`Category with id ${id} not found`);
+      return;
     }
+    const updatedCategory = { ...category, visible: !category.visible };
+    client.put(`categories/${id}`, updatedCategory)
+      .then(response => {
+        const newCategories = categories.map((category) =>
+          category.id === id ? updatedCategory : category
+        );
+        setCategories(newCategories);
+        const newClientCategories = clientCategories.map((category) =>
+          category.id === id ? updatedCategory : category
+        );
+        setClientCategories(newClientCategories);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  };
 
-    setId(null);
-    setCategoryName("");
-    setCategoryDescription("");
+  const handleToggleAllVisibility = () => {
+    const updatedCategories = categories.map((category) => {
+      return { ...category, visible: !visible };
+    });
+    setCategories(updatedCategories);
+    setClientCategories(updatedCategories);
+    setVisible(!visible);
+  };
+
+  const handleEditCategory = () => {
+    const updatedCategory = { ...editingCategory, name: editedCategoryName };
+    client.put(`categories/${editingCategory.id}`, updatedCategory)
+      .then(response => {
+        const newCategories = categories.map((category) =>
+          category.id === editingCategory.id ? updatedCategory : category
+        );
+        setCategories(newCategories);
+        const newClientCategories = clientCategories.map((category) =>
+          category.id === editingCategory.id ? updatedCategory : category
+        );
+        setClientCategories(newClientCategories);
+        setEditingCategory(null);
+        setEditedCategoryName("");
+        setEditModalVisible(false);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  };
+
+  const columns = [
+    {
+      title: "Name",
+      dataIndex: "name",
+      key: "name",
+    },
+    {
+      title: "Visible",
+      dataIndex: "visible",
+      key: "visible",
+      render: (visible, record) => (
+        <Switch
+          checked={visible}
+          onChange={() => handleToggleVisibility(record.id)}
+        />
+      ),
+    },
+    {
+      title: "Actions",
+      key: "actions",
+      render: (text, record) => (
+        <div>
+          <Button onClick={() => handleEdit(record)}>Edit</Button>
+          <Button onClick={() => handleDeleteCategory(record.id)}>Delete</Button>
+        </div>
+      ),
+    },
+  ];
+
+  const handleEdit = (record) => {
+    setEditingCategory(record);
+    setEditedCategoryName(record.name);
+    setEditModalVisible(true);
+  };
+
+  const handleCancel = () => {
+    setEditingCategory(null);
+    setEditedCategoryName("");
+    setEditModalVisible(false);
   };
 
   return (
     <div>
-      <h1>Admin Panel</h1>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="category-name">Category Name</label>
-        <input
-          type="text"
-          id="category-name"
+      <h1>Categories</h1>
+      <div>
+        <Input
+          placeholder="Category Name"
           value={categoryName}
           onChange={(e) => setCategoryName(e.target.value)}
         />
-
-        <label htmlFor="category-description">Category Description</label>
-        <textarea
-          id="category-description"
-          value={categoryDescription}
-          onChange={(e) => setCategoryDescription(e.target.value)}
-        />
-
-        <button type="submit">Add Category</button>
-      </form>
-
-      {categories.length > 0 && (
-        <ul>
-          {categories.map((category, index) => (
-            <li key={index}>
-              <h2>{category.name}</h2>
-              <p>{category.description}</p>
-            </li>
-          ))}
-        </ul>
-      )}
+        <Button type="primary" onClick={handleAddCategory} icon={<PlusOutlined />}>
+          Add
+        </Button>
+        <Button onClick={handleToggleAllVisibility}>
+          {visible ? 'Hide All' : 'Show All'}
+        </Button>
+      </div>
+      <Table dataSource={clientCategories.filter((category) => category.visible)} columns={columns} />
+      <Modal
+        title="Edit Category"
+        visible={editModalVisible}
+        onOk={handleEditCategory}
+        onCancel={handleCancel}
+      >
+        <Form>
+          <Form.Item label="Name">
+            <Input
+              value={editedCategoryName}
+              onChange={(e) => setEditedCategoryName(e.target.value)}
+            />
+          </Form.Item>
+        </Form>
+      </Modal>
     </div>
   );
-}
+};
 
-export default Category;
-
- 
+export default AdminPanel;
