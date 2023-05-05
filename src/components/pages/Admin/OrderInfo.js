@@ -33,7 +33,7 @@ function OrderInfo() {
     <div className='container-mt-5'>
       <div className='text-end'><Link to="/orderinfo" className='btn btn-primary'>Address info</Link></div>
 
-      <h1 className='text-center'>Sifaris etdiyiniz mehsullar</h1>
+      <h1 className='text-center'>Adres melumatlariniz</h1>
       <table className='table'>
         <thead>
           <tr>

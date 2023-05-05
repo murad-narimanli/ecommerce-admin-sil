@@ -146,6 +146,7 @@
   "order": [
     {
       "infos": {
+        "id":1,
         "fullName": "zumrud",
         "email": "zumrudbaxsaliyeva@gmail.com",
         "phone": "9999999999999999999",
@@ -156,10 +157,10 @@
       },
       "products": [
         {
+          "id": 1,
+          "img": "https://i.pinimg.com/564x/97/67/37/97673721416cc6025a21c4c414030497.jpg",
           "name": "qatiq",
           "price": "3.5",
-          "img": "https://i.pinimg.com/564x/97/67/37/97673721416cc6025a21c4c414030497.jpg",
-          "id": 19,
           "count": 1
         }
       ],

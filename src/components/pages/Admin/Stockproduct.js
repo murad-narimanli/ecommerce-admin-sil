@@ -117,9 +117,10 @@ function Stockproduct() {
           {products.map((product, i) => (
             <tr key={i}>
               <td>{product.id}</td>
+              <td><img src={product.img} alt="product-img" style={{ maxWidth: "100px" }} /></td>
+
               <td>{product.name}</td>
               <td>{product.price}</td>
-              <td><img src={product.img} alt="product-img" style={{ maxWidth: "100px" }} /></td>
              
               <td>{product.count}</td>
               <td>
