@@ -156,6 +156,8 @@ function ProductView() {
           Add +
         </Link>
       </div>
+    <div className='container-mt-5'>
+      <div className='text-end'><Link to="/productcreate" className='btn btn-success'>Add +</Link></div>
       <table className='table'>
         <thead>
           <tr>

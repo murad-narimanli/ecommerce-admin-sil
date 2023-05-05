@@ -1,5 +1,5 @@
 .ant-layout-sider-children{
-  background-color: rgb(142 199 115);
+  background-color: green;
 }
 .site-layout .trigger {
   padding: 0 24px !important;
@@ -7,6 +7,12 @@
   line-height: 64px;
   cursor: pointer;
   transition: color 0.3s;
+}
+ul{
+  background-color: green !important;
+}
+li{
+  color: #ffffff;
 }
 
 .site-layout .trigger:hover {

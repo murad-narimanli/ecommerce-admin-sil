@@ -1,16 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
-import {
-  Button,
-  Form,
-  Card,
-  Row,
-  Col,
-} from "antd";
+import { Button, Form, Card, Row, Col } from "antd";
 import JoditEditor from "jodit-react";
-import {
-  UnorderedListOutlined,
-  EditOutlined,
-} from "@ant-design/icons";
+import { UnorderedListOutlined, EditOutlined } from "@ant-design/icons";
 import client from "../../../api/api";
 const Discountnews = () => {
   const [data, setData] = useState([]);
@@ -42,7 +33,7 @@ const Discountnews = () => {
   const editData = (data) => {
     setId(data.id);
     const obj = {
-        discountnews: data.discountnews,
+      discountnews: data.discountnews,
     };
     formRef.current.setFieldsValue(obj);
   };
@@ -73,23 +64,20 @@ const Discountnews = () => {
                       editData(d);
                     }}
                     key="edit"
+                    style={{ color: "#fff" }}
                   />,
                 ]}
               >
-                
-    
-                 {data.map((d) => (
+                {data.map((d) => (
                   <div>
-                    <div dangerouslySetInnerHTML={{ __html:  d[`discountnews`] }} />
+                    <div
+                      dangerouslySetInnerHTML={{ __html: d[`discountnews`] }}
+                    />
                   </div>
                 ))}
-          
               </Card>
-             
             );
-           
           })}
-                 
         </Col>
         <Col md={24}>
           <div className="border pt-5 p-3">
@@ -115,7 +103,11 @@ const Discountnews = () => {
 
               <div className="d-flex">
                 <Form.Item>
-                  <Button type="primary" htmlType="submit">
+                  <Button
+                    type="success"
+                    htmlType="submit"
+                    style={{ background: "green", color: "#fff" }}
+                  >
                     {id ? "Edit" : "Add"}
                   </Button>
                 </Form.Item>
@@ -133,7 +125,6 @@ const Discountnews = () => {
             </Form>
           </div>
         </Col>
-      
       </Row>
     </div>
   );

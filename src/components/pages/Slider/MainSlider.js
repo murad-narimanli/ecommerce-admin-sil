@@ -142,6 +142,7 @@ const MainSlider = () => {
                       deleteData(d);
                     }}
                     key="delete"
+                    style={{color:"#fff"}}
                   />,
                   
                 ]}

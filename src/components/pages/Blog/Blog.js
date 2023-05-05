@@ -14,7 +14,6 @@
 // import client from "../../../api/api";
 // const {TextArea } = Input
 
-
 // const Blog = () => {
 //   const [data, setData] = useState([]);
 
@@ -79,21 +78,20 @@
 //                   />,
 //                 ]}
 //               >
-                
-    
+
 //                  {data.map((d) => (
 //                   <div>
 //                     <h6>Haqqımızda</h6>
-//                     <p> {d[`blog`]} </p>    
+//                     <p> {d[`blog`]} </p>
 //                   </div>
 //                 ))}
-          
+
 //               </Card>
-             
+
 //             );
-           
+
 //           })}
-                 
+
 //         </Col>
 //         <Col md={12}>
 //           <div className="border pt-5 p-3">
@@ -138,7 +136,7 @@
 //             </Form>
 //           </div>
 //         </Col>
-      
+
 //       </Row>
 //     </div>
 //   );
@@ -147,18 +145,8 @@
 // export default Blog;
 
 import React, { useRef, useEffect, useState } from "react";
-import {
-  Button,
-  Form,
-  Card,
-  Row,
-  Col,
-  Input,
-} from "antd";
-import {
-  UnorderedListOutlined,
-  EditOutlined,
-} from "@ant-design/icons";
+import { Button, Form, Card, Row, Col, Input } from "antd";
+import { UnorderedListOutlined, EditOutlined } from "@ant-design/icons";
 import client from "../../../api/api";
 const { TextArea } = Input;
 
@@ -167,7 +155,6 @@ const Blog = () => {
   const formRef = useRef(null);
   const [id, setId] = useState(null);
   const [date, setDate] = useState(null);
-
 
   useEffect(() => {
     getData();
@@ -246,87 +233,93 @@ const Blog = () => {
             return (
               <Card
                 key={d.id}
-                style={{ width: "100%" }}
+                style={{ width: "70%" }}
                 actions={[
                   <EditOutlined
                     onClick={() => {
                       editData(d);
                     }}
                     key="edit"
+                    style={{ color: "#fff" }}
                   />,
                   <Button
                     onClick={() => {
                       deleteData(d.id);
                     }}
                     key="delete"
+                    type="success"
+                    style={{ color: "#fff" }}
                   >
                     Delete
                   </Button>,
                 ]}
               >
-                          <div className="mb-2">
-              <img src={d.image} alt={d.title} style={{ maxWidth: "100%" }} />
-          </div>
-          <h2>{d.title}</h2>
-          <p>{d.text}</p>
-          <p>{d.date}</p>
+                <div className="mb-2">
+                  <img
+                    src={d.image}
+                    alt={d.title}
+                    style={{ maxWidth: "100%" }}
+                  />
+                </div>
+                <h2>{d.title}</h2>
+                <p>{d.text}</p>
+                <p>{d.date}</p>
+              </Card>
+            );
+          })}
+        </Col>
+        <Col md={12}>
+          <Form
+            name="basic"
+            onFinish={onFinish}
+            onFinishFailed={onFinishFailed}
+            ref={formRef}
+          >
+            <Form.Item
+              label="Title"
+              name="title"
+              rules={[{ required: true, message: "Please input title!" }]}
+            >
+              <Input />
+            </Form.Item>
 
-          </Card>
-        );
-      })}
- 
+            <Form.Item
+              label="Image URL"
+              name="image"
+              rules={[{ required: true, message: "Please input image URL!" }]}
+            >
+              <Input />
+            </Form.Item>
 
-    </Col>
-    <Col md={12}>
-      <Form
-        name="basic"
-        onFinish={onFinish}
-        onFinishFailed={onFinishFailed}
-        ref={formRef}
-      >
-        <Form.Item
-          label="Title"
-          name="title"
-          rules={[{ required: true, message: "Please input title!" }]}
-        >
-          <Input />
-        </Form.Item>
+            <Form.Item
+              label="Text"
+              name="text"
+              rules={[{ required: true, message: "Please input text!" }]}
+            >
+              <TextArea />
+            </Form.Item>
+            <Form.Item
+              label="Date"
+              name="date"
+              rules={[{ required: true, message: "Please input title!" }]}
+            >
+              <Input />
+            </Form.Item>
 
-        <Form.Item
-          label="Image URL"
-          name="image"
-          rules={[
-            { required: true, message: "Please input image URL!" },
-          ]}
-        >
-          <Input />
-        </Form.Item>
-
-        <Form.Item
-          label="Text"
-          name="text"
-          rules={[{ required: true, message: "Please input text!" }]}
-        >
-          <TextArea />
-        </Form.Item>
-        <Form.Item
-          label="Date"
-          name="date"
-          rules={[{ required: true, message: "Please input title!" }]}
-        >
-          <Input />
-        </Form.Item>
-
-        <Form.Item>
-          <Button type="primary" htmlType="submit">
-            {id ? "Update" : "Submit"}
-          </Button>
-        </Form.Item>
-      </Form>
-    </Col>
-  </Row>
-</div>
-);
+            <Form.Item>
+              <Button
+                type="success"
+                htmlType="submit"
+                style={{ background: "green", color: "#fff" }}
+              >
+                {id ? "Update" : "Submit"}
+              </Button>
+            </Form.Item>
+          </Form>
+        </Col>
+      </Row>
+    </div>
+  );
 };
 
 export default Blog;

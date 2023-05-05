@@ -1,5 +1,12 @@
-let Image = {
- 
-};
+import React from 'react'
+import Login from "./login.jpg"
 
-export default Image;
+function image() {
+  return (
+    <div>
+      <Login/>
+    </div>
+  )
+}
+
+export default image

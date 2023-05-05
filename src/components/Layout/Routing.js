@@ -35,7 +35,6 @@ const Routing = () => {
             <Route path="/weekoffers" element={<Weekoffers />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/discountnews" element={<Discountnews />} />
-
             <Route path="productcreate" element={<ProductCreate/>}/>
             <Route path="productupdate/:id" element={<ProductEdit/>}/>
             <Route path="productstock" element={<Stockproduct/>}/>

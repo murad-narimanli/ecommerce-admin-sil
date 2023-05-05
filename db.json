@@ -15,13 +15,6 @@
   ],
   "blog": [
     {
-      "title": "Üzünüzə qulluq edin",
-      "image": "http://localhost:3002/static/media/blogimg0.8840dec6ef5110de291a.png",
-      "text": "1112222",
-      "date": "30/04/23",
-      "id": 1
-    },
-    {
       "title": "vvv",
       "image": "https://i.pinimg.com/564x/42/78/36/4278360ceacc0cb7c443284263062897.jpg",
       "text": "hh",
@@ -40,7 +33,7 @@
   ],
   "title": [
     {
-      "title": "<h2>RİFAHINIZ</h2> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <h2>MƏQSƏDİMİZDİR</h2> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <h4>Hər Zaman Xidmətinizdəyik!</h4>",
+      "title": "<p><br></p>",
       "id": 1
     }
   ],
@@ -64,7 +57,7 @@
   ],
   "discountnews": [
     {
-      "discountnews": "<p>Bravo bonus kartla endirim əldə edin.</p>",
+      "discountnews": "<p><br></p>",
       "id": 1
     }
   ],
@@ -133,6 +126,12 @@
       "price": "6",
       "img": "https://i.pinimg.com/564x/a2/7d/94/a27d94edb97b66caa9cda04f7428d715.jpg",
       "id": 20
+    },
+    {
+      "name": "magaza",
+      "price": "250",
+      "img": "https://1news.az/images/2018/04/11/20180411020253327/IMG_9508.JPG",
+      "id": 21
     }
   ],
   "users": [
