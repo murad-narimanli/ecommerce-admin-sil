@@ -69,42 +69,42 @@
     },
     {
       "name": "Süd məhsulları və Yumurtalar",
-      "visible": true,
+      "visible": false,
       "id": 3
     },
     {
       "name": "Meyvə və Tərəvəz",
-      "visible": true,
+      "visible": false,
       "id": 4
     },
     {
       "name": "Körpə və Uşaqlar",
-      "visible": true,
+      "visible": false,
       "id": 5
     },
     {
       "name": "Baqqaliyə",
-      "visible": true,
+      "visible": false,
       "id": 6
     },
     {
       "name": "İri məişət texnikası",
-      "visible": true,
+      "visible": false,
       "id": 7
     },
     {
       "name": "Ev təmizləyici vasitələri",
-      "visible": true,
+      "visible": false,
       "id": 8
     },
     {
       "name": "Şirniyyat",
-      "visible": true,
+      "visible": false,
       "id": 9
     },
     {
       "name": "Məişət texnikası",
-      "visible": true,
+      "visible": false,
       "id": 10
     }
   ],
@@ -113,25 +113,22 @@
       "id": 18,
       "img": "https://www.adobe.com/express/feature/image/media_16ad2258cac6171d66942b13b8cd4839f0b6be6f3.png?width=2000&format=webply&optimize=medium",
       "name": "sokolad",
-      "price": "3"
+      "price": "3",
+      "category": "Un və qənnadı məhsulları"
     },
     {
-      "name": "qatiq",
-      "price": "3.5",
-      "img": "https://i.pinimg.com/564x/97/67/37/97673721416cc6025a21c4c414030497.jpg",
+      "name": "Meyve",
+      "price": "5",
+      "img": "https://i.pinimg.com/564x/25/9f/7e/259f7e3eced3ecd4185b8b3d5fb9aad1.jpg",
+      "category": "Meyvə və Tərəvəz",
       "id": 19
     },
     {
-      "name": "sokolad",
-      "price": "6",
-      "img": "https://i.pinimg.com/564x/a2/7d/94/a27d94edb97b66caa9cda04f7428d715.jpg",
+      "name": "tort",
+      "price": "999",
+      "img": "https://i.pinimg.com/564x/97/67/37/97673721416cc6025a21c4c414030497.jpg",
+      "category": "Məişət texnikası",
       "id": 20
-    },
-    {
-      "name": "magaza",
-      "price": "250",
-      "img": "https://1news.az/images/2018/04/11/20180411020253327/IMG_9508.JPG",
-      "id": 21
     }
   ],
   "users": [
