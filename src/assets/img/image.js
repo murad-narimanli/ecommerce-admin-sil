@@ -1,12 +1,12 @@
 import React from 'react'
 import Login from "./login.jpg"
+import shopping from "../img/shopping-buy.gif"
 
-function image() {
-  return (
-    <div>
-      <Login/>
-    </div>
-  )
-}
+let Image = {
+ shopping,
+ Login
 
-export default image
+};
+export default Image
+
+
