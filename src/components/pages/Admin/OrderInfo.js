@@ -31,7 +31,8 @@ function OrderInfo() {
 
   return (
     <div className='container-mt-5'>
-      <div className='text-end'><Link to="/orderinfo" className='btn btn-primary'>Address info</Link></div>
+            <div className='text-end'><Link to="/productstock" className='btn btn-primary'>Stock Product</Link></div>
+
 
       <h1 className='text-center'>Adres melumatlariniz</h1>
       <table className='table'>
