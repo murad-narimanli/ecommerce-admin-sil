@@ -67,7 +67,6 @@
 
 // // export default Stockproduct
 
-
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
@@ -81,8 +80,15 @@ function Stockproduct() {
       .then(res => {
         console.log(res.data) // burada res.data'yı yazdırarak doğru verilerin alınıp alınmadığını kontrol edebilirsiniz
         const products = res.data.flatMap(order => order.products); // her siparişin tüm ürünleri alınır
-        setColumns(Object.keys(products[0] || {}))
-        setProducts(products)
+        const columns = ['id', 'img', 'name', 'price', 'count', 'fullName', 'email']; // fullName ve email sütunlarını ekle
+        setColumns(columns)
+        const newProducts = products.map(product => {
+          const order = res.data.find(order => order.products.some(p => p.id === product.id));
+          // bu ürünü içeren siparişi bul
+          const { fullName, email } = order.infos; // siparişin bilgileri içindeki fullName ve email değerlerini al
+          return { ...product, fullName, email }; // bu değerleri ekleyerek ürünü yeni bir obje olarak döndür
+        })
+        setProducts(newProducts)
       })
       .catch(err => console.log(err))
   }, [])
@@ -100,9 +106,7 @@ function Stockproduct() {
   }
 
   return (
-    <div className='container-mt-5'>
-      <div className='text-end'><Link to="/orderinfo" className='btn btn-primary'>Address info</Link></div>
-
+    <div className='container mt-5'> {/* "container-mt-5" -> "container mt-5" */}
       <h1 className='text-center'>Sifaris etdiyiniz mehsullar</h1>
       <table className='table'>
         <thead>
@@ -118,13 +122,14 @@ function Stockproduct() {
             <tr key={i}>
               <td>{product.id}</td>
               <td><img src={product.img} alt="product-img" style={{ maxWidth: "100px" }} /></td>
-
               <td>{product.name}</td>
               <td>{product.price}</td>
-             
               <td>{product.count}</td>
+              <td>{product.fullName}</td>
+              <td>{product.email}</td>
               <td>
-                <button onClick={() => handleDelete(product.id)} className='btn btn-sm ms-1 btn-danger'>Delete</button>
+                <Link to={`/product/${product.id}`} className='btn btn-primary me-2'>Edit</Link> {/* to={/product/${product.id}} -> to={`/product/${product.id}`} */}
+                <button className='btn btn-danger' onClick={() => handleDelete(product.id)}>Delete</button>
               </td>
             </tr>
           ))}
@@ -135,6 +140,3 @@ function Stockproduct() {
 }
 
 export default Stockproduct
-
-
-

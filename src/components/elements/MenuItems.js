@@ -142,14 +142,14 @@ const MenuItems = () => {
           title={
             <span>
               <FundOutlined />
-              <span>Stock product</span>
+              <span>Address Info</span>
             </span>
           }
         >
           {" "}
           <Menu.Item key="53">
-            <Link className="text-decoration-none" to={`/productstock`}>
-              <span>Stock products </span>
+            <Link className="text-decoration-none" to={`/orderinfo`}>
+              <span>Address Info </span>
             </Link>
           </Menu.Item>
         </SubMenu>
