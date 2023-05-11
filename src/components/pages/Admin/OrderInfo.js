@@ -45,22 +45,22 @@ function OrderInfo() {
           </tr>
         </thead>
         <tbody>
-          {infos.map((info, i) => (
-            <tr key={i}>
-              <td>{info.id}</td>
-              <td>{info.fullName}</td>
-              <td>{info.email}</td>
-              <td>{info.phone}</td>
-              <td>{info.card}</td>
-              <td>{info.card}</td>
-              <td>{info.address}</td>
-              <td>{info.note}</td>
-              <td>
-                <button onClick={() => handleDelete(info.id)} className='btn btn-sm ms-1 btn-danger'>Delete</button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
+  {infos.map((info, i) => (
+    <tr key={i}>
+      <td>{info.id}</td>
+      <td>{info.fullName}</td>
+      <td>{info.email}</td>
+      <td>{info.phone}</td>
+      <td>{info.card}</td>
+      <td>{info.card}</td>
+      <td>{info.address}</td>
+      <td>{info.note}</td>
+      <td>
+        <button onClick={() => handleDelete(infos.id)} className='btn btn-sm ms-1 btn-danger'>Delete</button>
+      </td>
+    </tr>
+  ))}
+</tbody>
       </table>
     </div>
   )
