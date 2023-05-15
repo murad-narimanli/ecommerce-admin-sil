@@ -109,7 +109,7 @@
     },
     {
       "name": "",
-      "visible": true,
+      "visible": false,
       "id": 11
     }
   ],
@@ -134,6 +134,41 @@
       "img": "https://www.hamisiburada.az/storage/app/public/product/2022-01-23-61ed995c65380.png",
       "category": "Məişət texnikası",
       "id": 20
+    },
+    {
+      "name": "Ütü",
+      "price": "100",
+      "img": "https://i.pinimg.com/564x/86/94/62/8694627bb43bcd802acb7f262bf3deb2.jpg",
+      "category": "Məişət texnikası",
+      "id": 21
+    },
+    {
+      "name": "Alpen Gold",
+      "price": "2",
+      "img": "https://i.pinimg.com/564x/41/8e/4e/418e4e7d4554c67d406b4da6cc278da9.jpg",
+      "category": "Un və Qənnadı məhsulları",
+      "id": 22
+    },
+    {
+      "name": "Lays",
+      "price": "2",
+      "img": "https://i.pinimg.com/564x/14/fb/f5/14fbf589a2f366f1c3c38a217bf04876.jpg",
+      "category": "Baqqaliyə",
+      "id": 23
+    },
+    {
+      "name": "Perwool",
+      "price": "7",
+      "img": "https://s.cornershopapp.com/product-images/3060775.jpg?versionId=TCnnMhWCzIcIzF4gZ0wB2oE_RqcZMih5",
+      "category": "Ev təmizləyici vasitələri",
+      "id": 24
+    },
+    {
+      "name": "HTML",
+      "price": "52",
+      "img": "https://bazarstore.az/20984-large_default/nestle-btter-okolad-70-kakao-90-qr.jpg",
+      "category": "Körpə və Uşaqlar",
+      "id": 25
     }
   ],
   "users": [
@@ -163,27 +198,6 @@
     {
       "infos": {
         "id": 1,
-        "fullName": "zumrud",
-        "email": "zumrudbaxsaliyeva@gmail.com",
-        "phone": "9999999999999999999",
-        "card": "55555555555555555",
-        "region": "6",
-        "address": "wlopqpodwj",
-        "note": "hi everyone"
-      },
-      "products": [
-        {
-          "id": 19,
-          "img": "https://i.pinimg.com/564x/97/67/37/97673721416cc6025a21c4c414030497.jpg",
-          "name": "qatiq",
-          "price": "3.5",
-          "count": 1
-        }
-      ],
-      "id": 1
-    },
-    {
-      "infos": {
         "fullName": "Elyane",
         "email": "mahiyevaagtna@gmail.com",
         "phone": "55555555",
@@ -211,6 +225,53 @@
         }
       ],
       "id": 2
+    },
+    {
+      "infos": {
+        "id": 2,
+        "fullName": "Xaliqə İbrahimli",
+        "email": "khaligaibrahimli@gmail.com",
+        "phone": "0708276008",
+        "card": "33333388878",
+        "region": "4",
+        "address": "Suraxani rayonu",
+        "note": "Gəlməmişdən öncə zəng edin"
+      },
+      "products": [
+        {
+          "name": "Çiyələk",
+          "price": "5",
+          "img": "https://static.ticimax.cloud/47002/uploads/urunresimleri/buyuk/cilek-tohumu-5-1c0a.png",
+          "category": "Meyvə və Tərəvəz",
+          "id": 19,
+          "count": 2
+        },
+        {
+          "name": "Paltaryuyan",
+          "price": "685",
+          "img": "https://www.hamisiburada.az/storage/app/public/product/2022-01-23-61ed995c65380.png",
+          "category": "Məişət texnikası",
+          "id": 20,
+          "count": 1
+        },
+        {
+          "id": 18,
+          "img": "https://bazarstore.az/20984-large_default/nestle-btter-okolad-70-kakao-90-qr.jpg",
+          "name": "Nestle",
+          "price": "2",
+          "category": "Un və qənnadı məhsulları",
+          "count": 1
+        },
+        {
+          "name": "Ütü",
+          "price": "100",
+          "img": "https://i.pinimg.com/564x/86/94/62/8694627bb43bcd802acb7f262bf3deb2.jpg",
+          "category": "Məişət texnikası",
+          "id": 21,
+          "count": 2
+        }
+      ],
+      "id": 3
     }
   ]
 }
