@@ -78,7 +78,7 @@ const BlogDetail = () => {
           <div className="border p-3 mt-0 bg-white">
             <div className=" d-flex align-items-center page-name">
               <UnorderedListOutlined className="me-2" />
-              <span className="font-weight-bold">Data</span>
+              <span className="font-weight-bold">Blog Detail</span>
             </div>
           </div>
         </Col>
@@ -174,3 +174,8 @@ const BlogDetail = () => {
 };
 
 export default BlogDetail;
+
+
+
+
+

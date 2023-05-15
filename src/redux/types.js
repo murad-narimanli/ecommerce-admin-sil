@@ -25,6 +25,11 @@ const Types = {
   SET_IMAGE: "SET_IMAGE",
 
   ERROR_IMAGE: "ERROR_IMAGE",
+  SET_COMPANY: "SET_COMPANY",
+  SET_USER_ERROR: "SET_USER_ERROR",
+  LOG_OUT: "LOG_OUT",
+
+
 };
 
 export default Types;

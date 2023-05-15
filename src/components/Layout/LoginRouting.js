@@ -1,7 +1,8 @@
 import {Routes, Route, useNavigate} from "react-router-dom";
-import { useEffect } from "react";
 import Login from "../pages/Login";
+import { useEffect } from "react";
 import NoPage from "../elements/NoPage";
+
 
 const LoginRouting = ({isLoggedIn}) => {
     let navigate = useNavigate()
@@ -12,6 +13,7 @@ const LoginRouting = ({isLoggedIn}) => {
             navigate('/')
         }
     }, [isLoggedIn]);
+
     return (
         <Routes>
             <Route path="/" element={<Login />} />
@@ -22,3 +24,5 @@ const LoginRouting = ({isLoggedIn}) => {
 };
 
 export default LoginRouting;
+
+

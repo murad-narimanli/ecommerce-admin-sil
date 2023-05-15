@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from "react";
-import { Table, Button, Modal, Form, Input, Switch} from "antd";
-import { PlusOutlined } from "@ant-design/icons";
+import { Table, Button, Modal, Form, Input, Switch, Col} from "antd";
+import { PlusOutlined, UnorderedListOutlined } from "@ant-design/icons";
 import client from "../../../../api/api";
 
 const AdminPanel = () => {
@@ -151,7 +151,14 @@ const AdminPanel = () => {
 
   return (
     <div>
-      <h1>Categories</h1>
+        <Col xs={24}>
+          <div className="border p-3 mt-0 bg-white">
+            <div className=" d-flex align-items-center page-name">
+              <UnorderedListOutlined className="me-2" />
+              <span className="font-weight-bold">Kateqoriya</span>
+            </div>
+          </div>
+        </Col>
       <div>
         <Input
           placeholder="Category Name"

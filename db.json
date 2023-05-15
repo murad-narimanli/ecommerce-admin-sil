@@ -15,19 +15,40 @@
   ],
   "blog": [
     {
-      "title": "vvv",
-      "image": "https://i.pinimg.com/564x/42/78/36/4278360ceacc0cb7c443284263062897.jpg",
-      "text": "hh",
-      "date": "vvv",
-      "id": 2
+      "id": 3,
+      "date": "ddddddd",
+      "title": "ddddddd",
+      "image": "https://i.pinimg.com/564x/24/16/1d/24161d5ed1235cad0428303059222de1.jpg",
+      "text": "dddddd"
+    },
+    {
+      "id": 2,
+      "date": "vvvvvv",
+      "title": "vvvvvv",
+      "image": "https://i.pinimg.com/564x/cb/ca/41/cbca418af6430fb626c4764bb07dfb80.jpg",
+      "text": "vvvvv"
+    },
+    {
+      "title": "dirnaq",
+      "image": "https://i.pinimg.com/564x/b8/a8/a3/b8a8a34c8badf3496be3a6641c31bb31.jpg",
+      "text": "qulluq",
+      "date": "06.05.23",
+      "id": 4
+    },
+    {
+      "title": "ddddddd",
+      "image": "https://i.pinimg.com/564x/77/af/a0/77afa05da8ba61c24237feecfbdc254a.jpg",
+      "text": "rdff",
+      "date": "10.11.1996",
+      "id": 5
     }
   ],
   "blogdetail": [
     {
-      "title": "Üzünüzə qulluq edin",
-      "image": "http://localhost:3002/static/media/blogimg0.8840dec6ef5110de291a.png",
-      "text": "1112222",
-      "date": "30/04/23",
+      "title": "fffffffffff",
+      "image": "https://i.pinimg.com/564x/b8/a8/a3/b8a8a34c8badf3496be3a6641c31bb31.jpg",
+      "text": "ffffffffff",
+      "date": "5.05.23",
       "id": 1
     }
   ],
