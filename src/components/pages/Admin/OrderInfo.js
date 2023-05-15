@@ -31,7 +31,8 @@ function OrderInfo() {
 
   return (
     <div className='container-mt-5'>
-      <div className='text-end'><Link to="/orderinfo" className='btn btn-primary'>Address info</Link></div>
+            <div className='text-end'><Link to="/productstock" className='btn btn-primary'>Stock Product</Link></div>
+
 
       <h1 className='text-center'>Adres melumatlariniz</h1>
       <table className='table'>
@@ -44,22 +45,22 @@ function OrderInfo() {
           </tr>
         </thead>
         <tbody>
-          {infos.map((info, i) => (
-            <tr key={i}>
-              <td>{info.id}</td>
-              <td>{info.fullName}</td>
-              <td>{info.email}</td>
-              <td>{info.phone}</td>
-              <td>{info.card}</td>
-              <td>{info.card}</td>
-              <td>{info.address}</td>
-              <td>{info.note}</td>
-              <td>
-                <button onClick={() => handleDelete(info.id)} className='btn btn-sm ms-1 btn-danger'>Delete</button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
+  {infos.map((info, i) => (
+    <tr key={i}>
+      <td>{info.id}</td>
+      <td>{info.fullName}</td>
+      <td>{info.email}</td>
+      <td>{info.phone}</td>
+      <td>{info.card}</td>
+      <td>{info.card}</td>
+      <td>{info.address}</td>
+      <td>{info.note}</td>
+      <td>
+        <button onClick={() => handleDelete(infos.id)} className='btn btn-sm ms-1 btn-danger'>Delete</button>
+      </td>
+    </tr>
+  ))}
+</tbody>
       </table>
     </div>
   )
