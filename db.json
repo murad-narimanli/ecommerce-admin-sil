@@ -113,6 +113,8 @@
       "id": 11
     }
   ],
+  "tasks": [],
+  "companies": [],
   "products": [
     {
       "id": 18,
@@ -221,6 +223,36 @@
           "category": "Məişət texnikası",
           "id": 21,
           "count": 2
+        }
+      ],
+      "id": 1
+    },
+    {
+      "infos": {
+        "fullName": "zumrud",
+        "email": "zumrudbaxsaliyeva@gmail.com",
+        "phone": "99999555555",
+        "card": "666666666666666",
+        "region": "8",
+        "address": "hubbbbbbbbbbbbbbb",
+        "note": "hhhhhhhhhhhhhh"
+      },
+      "products": [
+        {
+          "id": 18,
+          "img": "https://www.adobe.com/express/feature/image/media_16ad2258cac6171d66942b13b8cd4839f0b6be6f3.png?width=2000&format=webply&optimize=medium",
+          "name": "sokolad",
+          "price": "3",
+          "category": "Un və qənnadı məhsulları",
+          "count": 3
+        },
+        {
+          "name": "Meyve",
+          "price": "5",
+          "img": "https://i.pinimg.com/564x/25/9f/7e/259f7e3eced3ecd4185b8b3d5fb9aad1.jpg",
+          "category": "Meyvə və Tərəvəz",
+          "id": 19,
+          "count": 1
         }
       ],
       "id": 1
