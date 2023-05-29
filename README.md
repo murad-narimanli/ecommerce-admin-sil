@@ -1,6 +1,8 @@
 # Ecommerce Admin Panel Site
 
 A comprehensive admin panel for managing an eCommerce website.
+
+Client site repo link:https://github.com/murad-narimanli/ecommerce-client-sil.git
 ## Introduction
 The Ecommerce Admin Panel Site is a powerful tool designed to streamline the management of an eCommerce website. It provides an intuitive interface for administrators to handle user management, product management, order management, inventory management, sales analytics, and more.
 
@@ -16,7 +18,7 @@ The Ecommerce Admin Panel Site is a powerful tool designed to streamline the man
 
 To install the Ecommerce Admin Panel Site, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/ecommerce-admin-panel.git`
+1. Clone the repository: `git clone https://github.com/murad-narimanli/ecommerce-admin-sil.git`
 2. Install the required dependencies: `npm install`
 3. Configure the database connection in `config.js`.
 4. Run the application: `npm start`
