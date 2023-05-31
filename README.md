@@ -7,7 +7,6 @@ Client site repo link:https://github.com/murad-narimanli/ecommerce-client-sil.gi
 The Ecommerce Admin Panel Site is a powerful tool designed to streamline the management of an eCommerce website. It provides an intuitive interface for administrators to handle user management, product management, order management, inventory management, sales analytics, and more.
 
 ## Features
-- User management: Create, update, and delete user accounts. Manage user roles and permissions.
 - Product management: Add, edit, and delete products. Manage product categories, pricing, and inventory.
 - Order management: View and process customer orders. Update order status and track shipments.
 - Inventory management: Track and manage product stock levels. Receive alerts for low inventory.
