@@ -35,8 +35,14 @@ Once the Ecommerce Admin Panel Site is installed, follow these steps to use it:
 Here's a screenshot of the admin panel dashboard:
 
 <img width="957" alt="admin login" src="https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/a0717542-546a-468c-b313-5b10fb1d7df6">
-![Home page](https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/e0e27413-e121-4b8b-adf5-438aa8b29d1b)
+<img width="957" src="https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/e9088171-d9c1-4617-a1e2-376aee97b16f">
 <img width="946" alt="Category" src="https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/547ab082-17cf-474e-80fd-891511092a88">
+<img width="960" alt="product" src="https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/d8140ebb-9af3-4993-9441-ce534101b356">
+<img width="959" alt="product add" src="https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/1a891c6e-3384-4662-99a9-90eee3faa6a4">
+<img width="960" alt="product choose" src="https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/20bb3f07-5234-41eb-9bcf-7d8ad9494c43">
+
+
+
 
 
 
