@@ -48,14 +48,9 @@ Here's a screenshot of the admin panel dashboard:
 <img width="960" alt="main slide" src="https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/2e3b5906-3c52-4e74-95fe-aa0dfd74c0d6">
 <img width="960" alt="blog" src="https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/e476998c-678b-43bd-bbfc-ba1a1830f45c">
 <img width="960" alt="blogdetail" src="https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/9e2bfcab-7d42-47fe-b33b-a0a5973a7223">
-<img width="960" alt="endirim" src="https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/ab56fca2-466c-4661-9954-34b4c78bdc7d">
-
-
-
-
-
-
-
+<img width="960" alt="endirim" src="https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/9d8407ba-7475-413e-9bb3-24583bfe351a">
+<img width="960" alt="addressinfo" src="https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/b82791ea-de04-4d90-b3ae-c9cf3e79b6da">
+<img width="960" alt="addressinfo" src="https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/d78aaa62-8b34-42f4-b1b7-d2650cdead0d">
 
 
 ## Contributing
