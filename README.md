@@ -21,8 +21,8 @@ To install the Ecommerce Admin Panel Site, follow these steps:
 2. Install the required dependencies: `npm install`
 3. Configure the database connection in `config.js`.
 4. Run the application: `npm start`
-5. Starting JSON Server: npx json-server --watch db.json
-6.Starting JSON Server on a specific port: npx json-server --watch db.json --port 3030
+5. Starting JSON Server: `npx json-server --watch db.json`
+6.Starting JSON Server on a specific port: `npx json-server --watch db.json --port 3030`
 
 
 
