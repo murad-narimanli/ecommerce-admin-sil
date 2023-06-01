@@ -23,6 +23,30 @@ To install the Ecommerce Admin Panel Site, follow these steps:
 4. Run the application: `npm start`
 5. Starting JSON Server: `npx json-server --watch db.json`.
 6. Starting JSON Server on a specific port: `npx json-server --watch db.json --port 3030`
+<img width="957" alt="admin login" src="https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/e4b50443-30f8-45f4-9272-43bfe926bb57">
+
+![Home page](https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/7a3988b9-d2a5-4fb4-91d8-80e6d1d4f276)
+<img width="946" alt="Category" src="https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/333930bb-afc2-4eb7-8dbe-54e4b398e095">
+<img width="960" alt="product" src="https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/bdf31b6d-45ad-4e84-a33d-28b1a8b8325d">
+<img width="959" alt="product add" src="https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/27226ab0-2b78-40f4-aa19-8f75bc2c14ab">
+<img width="960" alt="product choose" src="https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/6f48a878-707e-40cd-b041-a24fcebb878b">
+<img width="960" alt="about" src="https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/af4a2f61-6af5-4ae7-bedd-05863ae6bd01">
+<img width="960" alt="main slide" src="https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/8730fedd-3d5f-41ed-bf98-938e16b89317">
+<img width="960" alt="blog" src="https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/d154e36b-df5c-4a18-9c10-bf4568f24ca0">
+<img width="960" alt="blogdetail" src="https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/bfc32702-c81a-499c-8ffe-52ae52f9afb6">
+<img width="960" alt="endirim" src="https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/9d426256-10da-449a-863a-0766f8ccfa69">
+![WhatsApp Image 2023-05-31 at 18 01 13](https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/17e68c01-7f1d-478d-ab07-014aadb7a915)
+![WhatsApp Image 2023-05-31 at 18 07 33](https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/e8104f45-fd24-4be2-85e5-0b5e622554a0)
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -38,19 +62,7 @@ Once the Ecommerce Admin Panel Site is installed, follow these steps to use it:
 
 Here's a screenshot of the admin panel dashboard:
 
-<img width="960" alt="admin login" src="https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/a0717542-546a-468c-b313-5b10fb1d7df6">
-<img width="960" src="https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/e9088171-d9c1-4617-a1e2-376aee97b16f">
-<img width="960" alt="Category" src="https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/547ab082-17cf-474e-80fd-891511092a88">
-<img width="960" alt="product" src="https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/d8140ebb-9af3-4993-9441-ce534101b356">
-<img width="960" alt="product add" src="https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/1a891c6e-3384-4662-99a9-90eee3faa6a4">
-<img width="960" alt="product choose" src="https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/20bb3f07-5234-41eb-9bcf-7d8ad9494c43">
-<img width="960" alt="about" src="https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/67d27329-7fac-4030-91c4-f18bb888a10d">
-<img width="960" alt="main slide" src="https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/2e3b5906-3c52-4e74-95fe-aa0dfd74c0d6">
-<img width="960" alt="blog" src="https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/e476998c-678b-43bd-bbfc-ba1a1830f45c">
-<img width="960" alt="blogdetail" src="https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/9e2bfcab-7d42-47fe-b33b-a0a5973a7223">
-<img width="960" alt="endirim" src="https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/9d8407ba-7475-413e-9bb3-24583bfe351a">
-<img width="960" alt="addressinfo" src="https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/b82791ea-de04-4d90-b3ae-c9cf3e79b6da">
-<img width="960" alt="addressinfo" src="https://github.com/murad-narimanli/ecommerce-admin-sil/assets/88455262/d78aaa62-8b34-42f4-b1b7-d2650cdead0d">
+
 
 
 ## Contributing
